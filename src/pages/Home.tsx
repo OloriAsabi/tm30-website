@@ -14,6 +14,8 @@ import { Link } from 'react-router-dom'
 import blog1 from "assets/images/Rectangle 495.png"
 import blog2 from "assets/images/Rectangle 496.png"
 import blog3 from "assets/images/Rectangle 497.png"
+import Elipse8 from "assets/images/Ellipse 8.png"
+import Elipse9 from "assets/images/Ellipse 9.png"
 
 const projects = [
     {
@@ -175,7 +177,19 @@ const Home = () => {
                <h1>Testimonials</h1>
                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed vulputate</p>
            </div>
-
+             <div className="container">
+                  <div className="text">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed vulputate tellus pellentesque tempor. Vitae leo cras eu vitae molestie.</p>
+                      <img src={Elipse8} alt=""/>
+                  </div>
+                  <div className="profile">
+                      <img src={Elipse9} alt=""/>
+                      <div>
+                      <h2>Jeremiah Fasasi</h2>
+                      <p>CEO Fas Media</p>
+                      </div>
+                  </div>
+                 </div>   
        </div>
        
         </Home.Wrapper>
@@ -474,6 +488,7 @@ Home.Wrapper = styled.div`
 }
 
 .testimonial{
+    position: relative;
     margin: 7rem 0;  
     .header{
         & > *{
@@ -492,6 +507,52 @@ Home.Wrapper = styled.div`
             color: rgba(0, 13, 54, 0.45);
         }
     }
-}
+    .container{
+        margin: 3rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .text{
+            width: 35%;
+            background: #FCFEFF;
+            box-shadow: 15px 25px 40px rgba(64, 64, 64, 0.05);
+            border-radius: 30px;
+            padding: 4rem;
+            margin-left: 4rem;
 
+            p{
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 28px;
+                color: rgba(0, 13, 54, 0.45);
+            }
+            img{
+                position: absolute;
+                z-index: -1;
+                left: 42%;
+                top: 60%;
+            }
+    }
+}
+.profile{
+    width: 20%;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    div{
+        margin-left: 1rem;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 29px;
+        color: #000D36;
+    }
+    p{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 28px;
+        color: rgba(0, 13, 54, 0.45);
+    }
+}
+}
 `
