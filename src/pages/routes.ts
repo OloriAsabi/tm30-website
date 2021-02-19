@@ -1,7 +1,5 @@
-
-import Home from "./Home";
-import { NOT_FOUND, HOME } from "./pagesPath";
-
+import Home from './Home';
+import { NOT_FOUND, HOME } from './pagesPath';
 
 const routes = [
   // {
@@ -16,4 +14,4 @@ const routes = [
   },
 ];
 
-export default  routes
+export default routes;
