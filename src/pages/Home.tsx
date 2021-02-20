@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from '@emotion/styled';
 import heroBg from 'assets/images/1 1.png';
 import Dev from 'assets/icons/Group 32.png';
@@ -15,7 +15,19 @@ import blog1 from 'assets/images/Rectangle 495.png';
 import blog2 from 'assets/images/Rectangle 496.png';
 import blog3 from 'assets/images/Rectangle 497.png';
 import Elipse8 from 'assets/images/Ellipse 8.png';
+import Group4 from 'assets/images/Group 4.png';
+import Elipse1 from 'assets/images/Ellipse 1.png';
 import Elipse9 from 'assets/images/Ellipse 9.png';
+import client1 from 'assets/images/Group 40.png';
+import client2 from 'assets/images/Group 41.png';
+import client3 from 'assets/images/Group 42.png';
+import client4 from 'assets/images/Group 43.png';
+import client5 from 'assets/images/Group 44.png';
+import client6 from 'assets/images/Group 45.png';
+import client7 from 'assets/images/Group 46.png';
+import client8 from 'assets/images/Group 47.png';
+import RectangleWoman from 'assets/images/Rectangle 463.png';
+import Footer from 'components/Footer';
 
 const projects = [
   {
@@ -41,7 +53,14 @@ const projects = [
   },
 ];
 
+const data = {
+  "all" : <Footer/>,
+}
+
 const Home = () => {
+
+ const [activeTab, setActiveTab] = useState("all")
+
   let arrow = '>';
   return (
     <Home.Wrapper>
@@ -262,6 +281,41 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="partners">
+        <div className="text">
+          <h1>Our Partners</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
+            vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
+            molestie.
+          </p>
+        </div>
+        <img src={client1} alt="" className="client1" />
+        <img src={client2} alt="" className="client2" />
+        <img src={client3} alt="" className="client3" />
+        <img src={client4} alt="" className="client5" />
+        <img src={client5} alt="" className="client4" />
+        <img src={client6} alt="" className="client6" />
+        <img src={client7} alt="" className="client7" />
+        <img src={client8} alt="" className="client8" />
+      </div>
+      <div className="contact">
+        <div className="first">
+          <img src={Group4} className="dottedBox" alt="" />
+          <img src={RectangleWoman} alt="" className="lady" />
+          <img src={Elipse8} alt="" className="Elipse8" />
+        </div>
+        <div className="text">
+          <h1>Get In Touch With Us</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
+            vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
+            molestie.
+          </p>
+          <CustomButton>Contact</CustomButton>
+        </div>
+        <img src={Elipse1} alt="" className="ellipse1" />
       </div>
     </Home.Wrapper>
   );
@@ -626,6 +680,112 @@ Home.Wrapper = styled.div`
         line-height: 28px;
         color: rgba(0, 13, 54, 0.45);
       }
+    }
+  }
+  .partners {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10rem 0 4rem 0;
+    .text {
+      text-align: center;
+      h1 {
+        font-size: 40px;
+        line-height: 49px;
+        color: #000d36;
+      }
+      p {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+        color: rgba(0, 13, 54, 0.45);
+        width: 442px;
+        margin: 0 auto;
+      }
+    }
+    img {
+      position: absolute;
+    }
+    .client1 {
+      top: 6%;
+      left: 2%;
+    }
+    .client2 {
+      top: 25%;
+      left: 15%;
+    }
+    .client3 {
+      top: 45%;
+      left: 24%;
+    }
+    .client4 {
+      top: 80%;
+      right: 30%;
+    }
+    .client5 {
+      top: 70%;
+      left: 7%;
+    }
+    .client6 {
+      top: 50%;
+      right: 21%;
+    }
+    .client7 {
+      top: 10%;
+      right: 8%;
+    }
+    .client8 {
+      top: 70%;
+      right: 3%;
+    }
+  }
+  .contact {
+    padding: 10rem 10rem 10rem 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .first {
+      position: relative;
+      .Elipse8 {
+        position: absolute;
+        z-index: -2;
+        bottom: -10%;
+        right: -15%;
+      }
+      .dottedBox {
+        position: absolute;
+        z-index: -2;
+        bottom: -10%;
+        left: -15%;
+      }
+    }
+    .text {
+      width: 45%;
+      align-self: center;
+      h1 {
+        font-size: 40px;
+        line-height: 49px;
+        color: #000d36;
+      }
+      p {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 28px;
+        color: rgba(0, 13, 54, 0.45);
+        margin: 1.5rem 0;
+        width: 80%;
+      }
+    }
+    .ellipse1 {
+      position: absolute;
+      right: 0;
+      width: 40%;
+      top: 0%;
+      height : 911px;
     }
   }
 `;

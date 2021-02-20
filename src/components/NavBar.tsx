@@ -1,22 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from 'assets/icons/image 2.png';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { HOME } from 'pages/pagesPath';
 
 const NavBar = () => {
+ const history =  useHistory()
   return (
     <NavBar.Wrapper>
-      <div className="logo">
+      <div className="logo" onClick={() => history.push(HOME)}>
         <img src={Logo} alt="tm30" />
       </div>
 
       <div className="links">
-        <Link to="">Home</Link>
-        <Link to="">About</Link>
-        <Link to="">Services</Link>
-        <Link to="">Project</Link>
-        <Link to="">Blog</Link>
-        <Link to="">Contact</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/projects">Project</Link>
+        <Link to="/blog">Blog</Link>
+        <Link to="/contact">Contact</Link>
       </div>
     </NavBar.Wrapper>
   );
@@ -30,8 +32,10 @@ NavBar.Wrapper = styled.nav`
   padding: 1.5rem 8rem;
   background: #fcfeff;
   box-shadow: 0px 8px 16px rgba(64, 64, 64, 0.1);
+  height: 65px;
   .logo {
     width: 50%;
+    cursor: pointer;
   }
   .links {
     width: 50%;
