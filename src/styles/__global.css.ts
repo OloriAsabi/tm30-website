@@ -27,12 +27,17 @@ export default css`
   html {
    // This defines what 1rem is
    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+   height: 100%;
   }
   
   body {
     font-family: "Proxima Nova", "Fira Sans", sans-serif;
     box-sizing: border-box;
     background: #F5FCFF;
+    height: 100%;
+  }
+  #root{
+    height: 100%;
   }
   /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

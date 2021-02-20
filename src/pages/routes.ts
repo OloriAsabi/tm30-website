@@ -1,12 +1,14 @@
+import About from './About';
 import Home from './Home';
-import { NOT_FOUND, HOME } from './pagesPath';
+import { ABOUT, HOME } from './pagesPath';
 
+// do a not found page
 const routes = [
-  // {
-  //   path: USER,
-  //   component: ,
-  //   exact: false,
-  // },
+  {
+    path: ABOUT,
+    component: About,
+    exact: false,
+  },
   {
     path: HOME,
     component: Home,
