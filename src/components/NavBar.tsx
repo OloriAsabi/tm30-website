@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { HOME } from 'pages/pagesPath';
 
 const NavBar = () => {
- const history =  useHistory()
+  const history = useHistory();
   return (
     <NavBar.Wrapper>
       <div className="logo" onClick={() => history.push(HOME)}>
@@ -26,6 +26,8 @@ const NavBar = () => {
 
 export default NavBar;
 NavBar.Wrapper = styled.nav`
+  position: relative;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
