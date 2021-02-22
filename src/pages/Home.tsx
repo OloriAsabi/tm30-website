@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import heroBg from 'assets/images/1 1.png';
 import Dev from 'assets/icons/Group 32.png';
@@ -18,6 +18,7 @@ import Elipse8 from 'assets/images/Ellipse 8.png';
 import Group4 from 'assets/images/Group 4.png';
 import Elipse1 from 'assets/images/Ellipse 1.png';
 import Elipse9 from 'assets/images/Ellipse 9.png';
+import Elipse8p from 'assets/images/Ellipse 8@2x.png';
 import client1 from 'assets/images/Group 40.png';
 import client2 from 'assets/images/Group 41.png';
 import client3 from 'assets/images/Group 42.png';
@@ -27,9 +28,8 @@ import client6 from 'assets/images/Group 45.png';
 import client7 from 'assets/images/Group 46.png';
 import client8 from 'assets/images/Group 47.png';
 import RectangleWoman from 'assets/images/Rectangle 463.png';
-import Footer from 'components/Footer';
 
-const projects = [
+let allProjects = [
   {
     name: 'PayMyBills',
     desc: 'A Whatsapp payment platform.',
@@ -53,18 +53,68 @@ const projects = [
   },
 ];
 
-const data = {
-  "all" : <Footer/>,
-}
+let webProjects = [
+  {
+    name: 'Backup Cash',
+    desc: 'A financial savings application.',
+    link: '',
+    image: backup,
+    bgColor: '#F5DD01',
+  },
+  {
+    name: 'Edusponsor',
+    desc: 'An exam sponsoring platform.',
+    link: '',
+    image: eduSpons,
+    bgColor: '#FF57A5',
+  },
+];
+
+let mobileProjects = [
+  {
+    name: 'Backup Cash',
+    desc: 'A financial savings application.',
+    link: '',
+    image: backup,
+    bgColor: '#F5DD01',
+  },
+  {
+    name: 'Edusponsor',
+    desc: 'An exam sponsoring platform.',
+    link: '',
+    image: eduSpons,
+    bgColor: '#FF57A5',
+  },
+];
 
 const Home = () => {
+  const [activeTab, setActiveTab] = useState('all');
+  const [data, setData] = useState(allProjects);
 
- const [activeTab, setActiveTab] = useState("all")
+  const handleClick = (tab: any) => {
+    setActiveTab(tab);
+  };
+
+  useEffect(() => {
+    switch (activeTab) {
+      case 'web':
+        setData(webProjects);
+        break;
+      case 'mobile':
+        setData(mobileProjects);
+        break;
+      default:
+        setData(allProjects);
+        break;
+    }
+    console.log(activeTab, allProjects);
+  }, [activeTab]);
 
   let arrow = '>';
   return (
     <Home.Wrapper>
       <div className="hero">
+        <img src={Elipse8p} alt="arc" className="left-arc" />
         <div className="text">
           <h1>
             We help organizations <span>develop</span> technology-driven
@@ -77,7 +127,7 @@ const Home = () => {
           </p>
           <CustomButton>About Us</CustomButton>
         </div>
-        <img src={heroBg} alt="" />
+        <img src={heroBg} className="hero-bg" alt="" />
       </div>
       <section className="what-we-do">
         <h1>What we do</h1>
@@ -199,12 +249,27 @@ const Home = () => {
         </div>
         <div className="project">
           <div className="header">
-            <p>All</p>
-            <p>Web</p>
-            <p>Mobile</p>
+            <p
+              className={activeTab === 'all' ? 'active' : ''}
+              onClick={() => handleClick('all')}
+            >
+              All
+            </p>
+            <p
+              className={activeTab === 'web' ? 'active' : ''}
+              onClick={() => handleClick('web')}
+            >
+              Web
+            </p>
+            <p
+              className={activeTab === 'mobile' ? 'active' : ''}
+              onClick={() => handleClick('mobile')}
+            >
+              Mobile
+            </p>
           </div>
           <div className="container">
-            {projects.map((proj) => (
+            {data.map((proj) => (
               <section key={proj.name}>
                 <div
                   className={`bg`}
@@ -324,7 +389,17 @@ const Home = () => {
 export default Home;
 
 Home.Wrapper = styled.div`
+  .active {
+    border-bottom: 1px solid green;
+  }
   .hero {
+    position: relative;
+    .left-arc {
+      position: absolute;
+      width : 40%;
+      top: -20%;
+      
+    }
     background: linear-gradient(
       180deg,
       #61d0ff 0%,
@@ -353,7 +428,7 @@ Home.Wrapper = styled.div`
         margin: 2rem 0;
       }
     }
-    img {
+    .hero-bg {
       height: 576px;
       width: 56%;
     }
@@ -512,7 +587,7 @@ Home.Wrapper = styled.div`
       width: 60%;
       .container {
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         width: 100%;
         section {
           width: 30%;
@@ -785,7 +860,7 @@ Home.Wrapper = styled.div`
       right: 0;
       width: 40%;
       top: 0%;
-      height : 911px;
+      height: 911px;
     }
   }
 `;
