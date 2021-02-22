@@ -8,6 +8,11 @@ import innovation from 'assets/images/Group 26.png';
 import Excellence from 'assets/images/Group 28.png';
 import Creativivty from 'assets/images/Group (2).png';
 import dottedBox from 'assets/icons/Group 3.png';
+import { CustomButton } from 'reusables/CustomButton';
+import Albert from 'assets/images/Group 54.png';
+import Placeholder from 'assets/images/Rectangle 524.png';
+import dottedBox2 from "assets/images/Group 1 (1).png"
+import Elipse1 from 'assets/images/Ellipse 1.png';
 
 const values = [
   {
@@ -34,6 +39,39 @@ const values = [
     image: Excellence,
     header: 'Excellence',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.',
+  },
+];
+
+const staffs = [
+  {
+    image: Placeholder,
+    title: 'COO & Partner',
+    name: 'Albert Afolabi',
+  },
+  {
+    image: Placeholder,
+    title: 'CTO &  Partner',
+    name: 'Albert Saheed',
+  },
+  {
+    image: Placeholder,
+    title: 'CTO &  Partner',
+    name: 'Albert Saheed',
+  },
+  {
+    image: Placeholder,
+    title: 'CTO &  Partner',
+    name: 'Albert Saheed',
+  },
+  {
+    image: Placeholder,
+    title: 'CTO &  Partner',
+    name: 'Albert Saheed',
+  },
+  {
+    image: Placeholder,
+    title: 'CTO &  Partner',
+    name: 'Albert Saheed',
   },
 ];
 
@@ -69,6 +107,24 @@ const About = () => {
             tellus vivamus massa proin nascetur et
           </p>
         </div>
+      </div>
+      <div className="team">
+        <img src={dottedBox2} alt="" className="dottedBox2"/>
+        <div className="header">
+          <h1>Meet the Team</h1>
+          <CustomButton>Join us</CustomButton>
+        </div>
+        <div className="body">
+          {staffs.map((staff) => (
+            <div className="staff" key={staff.name}>
+              <img src={staff.image} alt={staff.name} />
+              <h1>{staff.name}</h1>
+              <p>{staff.title}</p>
+            </div>
+          ))}
+
+        </div>
+        <img src={Elipse1} alt="" className="ellipse1" />
       </div>
     </About.Wrapper>
   );
@@ -142,6 +198,57 @@ About.Wrapper = styled.div`
         line-height: 49px;
         color: #000d36;
       }
+    }
+  }
+  .team {
+    position: relative;
+    padding: 0 8rem;
+    margin: 2rem auto;
+    .dottedBox2{
+      position: absolute;
+      left: 0;
+      width: 9.5%;
+      top: 28%;
+    }
+    .header {
+      h1 {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 49px;
+        color: #000d36;
+        margin: 2rem 0;
+      }
+    }
+    .body {
+      width: 82%;
+      margin-left: auto;
+      margin-top: -50px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      & > * {
+        width: 30%;
+        margin: 2rem auto;
+        h1 {
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 29px;
+          color: #000d36;
+          margin: 1rem auto;
+        }
+        p {
+          font-size: 16px;
+          line-height: 19px;
+          color: #000d36;
+        }
+      }
+    }
+    .ellipse1 {
+      position: absolute;
+      right: 0;
+      width: 40%;
+      top: 40%;
+      height: 911px;
     }
   }
 `;

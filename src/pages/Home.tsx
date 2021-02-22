@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import heroBg from 'assets/images/1 1.png';
+import heroBg from 'assets/images/00Asset 2@4x 1.png';
 import Dev from 'assets/icons/Group 32.png';
 import Training from 'assets/icons/Group.png';
 import Consulting from 'assets/icons/Group 33.png';
@@ -396,9 +396,8 @@ Home.Wrapper = styled.div`
     position: relative;
     .left-arc {
       position: absolute;
-      width : 40%;
+      width: 40%;
       top: -20%;
-      
     }
     background: linear-gradient(
       180deg,
@@ -531,11 +530,11 @@ Home.Wrapper = styled.div`
         &.mobile {
           margin-bottom: 10rem;
           .first {
-            padding: 1.3rem 2rem;
+            padding: 1.9rem 2.5rem;
           }
         }
         .first {
-          padding: 1.3rem 1.3rem;
+          padding: 1.9rem 1.9rem;
           background: white;
           border-radius: 35px;
           width: fit-content;
@@ -587,10 +586,10 @@ Home.Wrapper = styled.div`
       width: 60%;
       .container {
         display: flex;
-        /* justify-content: space-between; */
+        justify-content: space-between;
         width: 100%;
         section {
-          width: 30%;
+          width: 32%;
           background: #fcfeff;
           box-shadow: 15.4749px 25.7915px 41.2663px rgba(64, 64, 64, 0.05);
           border-radius: 30px;

@@ -18,6 +18,6 @@ export default Pages;
 
 Pages.Wrapper = styled.div`
   display: grid;
-  grid-auto-rows : auto auto 300px;
+  grid-auto-rows : 65px auto 300px;
   height: 100%;
 `;
