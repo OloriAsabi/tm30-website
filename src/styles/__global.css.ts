@@ -36,6 +36,9 @@ export default css`
     background: #F5FCFF;
     height: 100%;
   }
+  h1,h2{
+    font-weight: 800;
+  }
   #root{
     height: 100%;
   }

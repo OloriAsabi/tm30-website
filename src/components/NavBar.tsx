@@ -1,24 +1,60 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from 'assets/icons/image 2.png';
-import { Link, useHistory } from 'react-router-dom';
-import { HOME } from 'pages/pagesPath';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import {
+  HOME,
+  ABOUT,
+  SERVICES,
+  BLOG,
+  PROJECTS,
+  CONTACT,
+} from 'pages/pagesPath';
 
 const NavBar = () => {
   const history = useHistory();
+  const path = useLocation().pathname;
+  const Links = [
+    {
+      route: HOME,
+      name: 'home',
+    },
+    {
+      route: ABOUT,
+      name: 'about',
+    },
+    {
+      route: SERVICES,
+      name: 'services',
+    },
+    {
+      route: PROJECTS,
+      name: 'projects',
+    },
+    {
+      route: BLOG,
+      name: 'blog',
+    },
+    {
+      route: CONTACT,
+      name: 'contact',
+    },
+  ];
+
   return (
     <NavBar.Wrapper>
       <div className="logo" onClick={() => history.push(HOME)}>
         <img src={Logo} alt="tm30" />
       </div>
-
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/projects">Project</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/contact">Contact</Link>
+        {Links.map((link) => (
+          <Link
+            to={link.route}
+            className={path.includes(link.name) ? `active` : ''}
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
     </NavBar.Wrapper>
   );
@@ -49,6 +85,10 @@ NavBar.Wrapper = styled.nav`
       font-size: 18px;
       line-height: 22px;
       color: #000d36;
+      text-transform: capitalize;
     }
+  }
+  .active {
+    border-bottom: 2px solid #61d0ff;
   }
 `;

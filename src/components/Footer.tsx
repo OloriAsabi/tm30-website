@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import Logo from 'assets/icons/image 2.png';
+import Logo from 'assets/images/00Asset 1@4x 1.png';
 import { Link } from 'react-router-dom';
 import IG from 'assets/icons/Instagram.png';
 import FB from 'assets/icons/Vector (12).png';
 import twitter from 'assets/icons/Vector (14).png';
 import LinkedIn from 'assets/icons/Vector (13).png';
+
 
 const Footer = () => {
   let date = new Date();
@@ -114,7 +115,7 @@ Footer.Wrapper = styled.footer`
   .last-text {
     display: flex;
     justify-content: space-between;
-    padding:  0 8rem;
+    padding: 0 8rem;
     p {
       font-weight: bold;
       font-size: 14px;
