@@ -1,8 +1,9 @@
 import About from './About';
 import Home from './Home';
-import { ABOUT, HOME, PROJECTS, SERVICES } from './pagesPath';
+import { ABOUT, HOME, PROJECTS, SERVICES, CONTACT } from './pagesPath';
 import Projects from './Project';
 import Services from './Services';
+import Contact from "./Contact"
 
 // do a not found page
 const routes = [
@@ -24,6 +25,11 @@ const routes = [
   {
     path: PROJECTS,
     component: Projects,
+    exact: false,
+  },
+  {
+    path: CONTACT,
+    component: Contact,
     exact: false,
   },
 ];
