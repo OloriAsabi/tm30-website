@@ -28,6 +28,37 @@ import client6 from 'assets/images/Group 45.png';
 import client7 from 'assets/images/Group 46.png';
 import client8 from 'assets/images/Group 47.png';
 import RectangleWoman from 'assets/images/Rectangle 463.png';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import est from 'assets/images/Dashboard 1.png';
+import { LeftArrow } from 'components/Arrow';
+
+const options = {
+  margin: 10,
+  responsiveClass: true,
+  nav: true,
+  autoplay: false,
+  // navText: ["<" , '>'],
+  smartSpeed: 1000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    400: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    750: {
+      items: 2,
+    },
+    1250: {
+      items: 3,
+    },
+  },
+};
 
 let allProjects = [
   {
@@ -36,6 +67,7 @@ let allProjects = [
     link: '',
     image: PMB,
     bgColor: '#74C372',
+    addMargin: false,
   },
   {
     name: 'Backup Cash',
@@ -43,6 +75,7 @@ let allProjects = [
     link: '',
     image: backup,
     bgColor: '#F5DD01',
+    addMargin: false,
   },
   {
     name: 'Edusponsor',
@@ -50,16 +83,26 @@ let allProjects = [
     link: '',
     image: eduSpons,
     bgColor: '#FF57A5',
+    addMargin: true,
+  },
+  {
+    name: 'Estate management',
+    desc: 'A Whatsapp payment platform.',
+    link: '',
+    image: est,
+    bgColor: '#002DCC',
+    addMargin: true,
   },
 ];
 
 let webProjects = [
   {
-    name: 'Backup Cash',
-    desc: 'A financial savings application.',
+    name: 'Estate management',
+    desc: 'A Whatsapp payment platform.',
     link: '',
-    image: backup,
-    bgColor: '#F5DD01',
+    image: est,
+    bgColor: '#002DCC',
+    addMargin: true,
   },
   {
     name: 'Edusponsor',
@@ -67,6 +110,7 @@ let webProjects = [
     link: '',
     image: eduSpons,
     bgColor: '#FF57A5',
+    addMargin: true,
   },
 ];
 
@@ -77,6 +121,7 @@ let mobileProjects = [
     link: '',
     image: backup,
     bgColor: '#F5DD01',
+    addMargin: false,
   },
   {
     name: 'Edusponsor',
@@ -84,6 +129,7 @@ let mobileProjects = [
     link: '',
     image: eduSpons,
     bgColor: '#FF57A5',
+    addMargin: true,
   },
 ];
 
@@ -250,42 +296,48 @@ const Home = () => {
         <div className="project">
           <div className="header">
             <p
-              className={activeTab === 'all' ? 'active' : ''}
+              className={activeTab === 'all' ? 'isActive' : ''}
               onClick={() => handleClick('all')}
             >
               All
             </p>
             <p
-              className={activeTab === 'web' ? 'active' : ''}
+              className={activeTab === 'web' ? 'isActive' : ''}
               onClick={() => handleClick('web')}
             >
               Web
             </p>
             <p
-              className={activeTab === 'mobile' ? 'active' : ''}
+              className={activeTab === 'mobile' ? 'isActive' : ''}
               onClick={() => handleClick('mobile')}
             >
               Mobile
             </p>
           </div>
           <div className="container">
-            {data.map((proj) => (
-              <section key={proj.name}>
-                <div
-                  className={`bg`}
-                  style={{ backgroundColor: `${proj.bgColor}` }}
-                >
-                  <img
-                    src={proj.image}
-                    alt=""
-                    className={`${proj.name === 'Edusponsor' && 'edu'}`}
-                  />
-                </div>
-                <h2>{proj.name}</h2>
-                <p>{proj.desc}</p>
-                <Link to={proj.link}>View project {arrow} </Link>
-              </section>
-            ))}
+            <OwlCarousel
+              className="slider-items owl-carousel"
+              {...options}
+              key={data.length}
+            >
+              {data.map((proj) => (
+                <section key={proj.name}>
+                  <div
+                    className={`bg`}
+                    style={{ backgroundColor: `${proj.bgColor}` }}
+                  >
+                    <img
+                      src={proj.image}
+                      alt=""
+                      className={`${proj.addMargin && 'edu'}`}
+                    />
+                  </div>
+                  <h2>{proj.name}</h2>
+                  <p>{proj.desc}</p>
+                  <Link to={proj.link}>View project {arrow} </Link>
+                </section>
+              ))}
+            </OwlCarousel>
           </div>
         </div>
       </div>
@@ -346,6 +398,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        
       </div>
       <div className="partners">
         <div className="text">
@@ -389,8 +442,31 @@ const Home = () => {
 export default Home;
 
 Home.Wrapper = styled.div`
-  .active {
+  .isActive {
     border-bottom: 1px solid green;
+  }
+
+  .owl-stage {
+    width: 200% !important;
+  }
+  .owl-nav{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4rem;
+  }
+  .owl-prev,
+  .owl-next {
+    width: 48px;
+    height: 48px;
+    background: rgba(97, 208, 255, 0.45) !important;
+    border-radius: 10px;
+    color : white !important;
+    span{
+      font-size: 30px;
+    }
+  }
+  .owl-prev{
+    margin-right: 2rem;
   }
   .hero {
     position: relative;
@@ -586,14 +662,15 @@ Home.Wrapper = styled.div`
       width: 60%;
       .container {
         display: flex;
-        justify-content: space-between;
+        /*  justify-content: space-center; */
         width: 100%;
         section {
-          width: 32%;
+          width: 100%;
           background: #fcfeff;
-          box-shadow: 15.4749px 25.7915px 41.2663px rgba(64, 64, 64, 0.05);
+          /* box-shadow: 15.4749px 25.7915px 41.2663px rgba(64, 64, 64, 0.05); */
           border-radius: 30px;
           padding: 1rem 1rem 2rem;
+
           .edu {
             position: relative;
             left: 50px;

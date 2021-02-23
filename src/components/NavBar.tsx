@@ -47,14 +47,20 @@ const NavBar = () => {
         <img src={Logo} alt="tm30" />
       </div>
       <div className="links">
-        {Links.map((link) => (
-          <Link
-            to={link.route}
-            className={path.includes(link.name) ? `active` : ''}
-          >
-            {link.name}
-          </Link>
-        ))}
+        {Links.map((link) =>
+          link.name === 'blog' ? (
+            <Link to={{ pathname: 'https://medium.com/@tm30' }} target="_blank">
+              {link.name}
+            </Link>
+          ) : (
+            <Link
+              to={link.route}
+              className={path.includes(link.name) ? `active` : ''}
+            >
+              {link.name}
+            </Link>
+          )
+        )}
       </div>
     </NavBar.Wrapper>
   );
