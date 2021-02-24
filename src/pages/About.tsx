@@ -11,7 +11,7 @@ import dottedBox from 'assets/icons/Group 3.png';
 import { CustomButton } from 'reusables/CustomButton';
 import Albert from 'assets/images/Group 54.png';
 import Placeholder from 'assets/images/Rectangle 524.png';
-import dottedBox2 from "assets/images/Group 1 (1).png"
+import dottedBox2 from 'assets/images/Group 1 (1).png';
 import Elipse1 from 'assets/images/Ellipse 1.png';
 
 const values = [
@@ -109,7 +109,7 @@ const About = () => {
         </div>
       </div>
       <div className="team">
-        <img src={dottedBox2} alt="" className="dottedBox2"/>
+        <img src={dottedBox2} alt="" className="dottedBox2" />
         <div className="header">
           <h1>Meet the Team</h1>
           <CustomButton>Join us</CustomButton>
@@ -122,7 +122,6 @@ const About = () => {
               <p>{staff.title}</p>
             </div>
           ))}
-
         </div>
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
@@ -203,8 +202,8 @@ About.Wrapper = styled.div`
   .team {
     position: relative;
     padding: 0 8rem;
-    margin: 2rem auto;
-    .dottedBox2{
+    margin: 15rem auto 5rem;
+    .dottedBox2 {
       position: absolute;
       left: 0;
       width: 9.5%;
@@ -249,6 +248,7 @@ About.Wrapper = styled.div`
       width: 40%;
       top: 40%;
       height: 911px;
+      z-index: -1;
     }
   }
 `;

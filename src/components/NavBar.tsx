@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Logo from 'assets/icons/image 2.png';
 import { Link, useHistory, useLocation } from 'react-router-dom';
@@ -14,6 +14,7 @@ import {
 const NavBar = () => {
   const history = useHistory();
   const path = useLocation().pathname;
+  const [show, setShow] = useState(false);
   const Links = [
     {
       route: HOME,
@@ -46,16 +47,21 @@ const NavBar = () => {
       <div className="logo" onClick={() => history.push(HOME)}>
         <img src={Logo} alt="tm30" />
       </div>
-      <div className="links">
+      <div className="menu-icon" onClick={() => setShow(!show)}>
+        <i className={show ? 'fas fa-times' : 'fas fa-bars'}></i>
+      </div>
+
+      <div className={`links ${show ? 'show' : 'hide'}`}>
         {Links.map((link) =>
           link.name === 'blog' ? (
-            <Link to={{ pathname: 'https://medium.com/@tm30' }} target="_blank">
+            <Link to={{ pathname: 'https://medium.com/@tm30' }} target="_blank" key={link.name}>
               {link.name}
             </Link>
           ) : (
             <Link
               to={link.route}
               className={path.includes(link.name) ? `active` : ''}
+              key={link.name}
             >
               {link.name}
             </Link>
@@ -96,5 +102,40 @@ NavBar.Wrapper = styled.nav`
   }
   .active {
     border-bottom: 2px solid #61d0ff;
+  }
+  .fas{
+    display : none;
+  }
+  @media (max-width: 768px) {
+    padding : 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    .hide {
+      display: none;
+    }
+    .fas{
+      font-size: 25px;
+      display:  block;
+      cursor: pointer;
+    }
+    .links {
+      flex-direction: column;
+      position: absolute;
+      top: 120%;
+      a{
+        margin :  1rem 0;
+        width: fit-content;
+      }
+      /* padding: 2rem;
+      padding-top: 5rem; */
+      /* position: absolute;
+      top: -120%; */
+      /* left: 0;
+      width: 100%;
+      z-index: 20;
+      height: 100vh; */
+      /* background: white;
+      display: block; */
+    }
   }
 `;

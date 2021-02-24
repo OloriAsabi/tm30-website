@@ -329,7 +329,7 @@ const Home = () => {
                     <img
                       src={proj.image}
                       alt=""
-                      className={`${proj.addMargin && 'edu'}`}
+                      className={`${proj.addMargin ? 'edu' : "none"}`}
                     />
                   </div>
                   <h2>{proj.name}</h2>
@@ -355,21 +355,21 @@ const Home = () => {
             <img src={blog1} alt="" />
             <p className="date">admin l 20 Dec 20</p>
             <h1>Working in the tech sector</h1>
-            <p>Read more</p>
+            <p className="read">Read more</p>
           </div>
 
           <div className="single-blog">
             <img src={blog2} alt="" />
             <p className="date">admin l 20 Dec 20</p>
             <h1>Comparison chart for Apps</h1>
-            <p>Read more</p>
+            <p className="read">Read more</p>
           </div>
 
           <div className="single-blog">
             <img src={blog3} alt="" />
             <p className="date">admin l 20 Dec 20</p>
             <h1>Right time to join the Cloud?</h1>
-            <p>Read more</p>
+            <p className="read">Read more</p>
           </div>
         </div>
       </div>
@@ -398,7 +398,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
       </div>
       <div className="partners">
         <div className="text">
@@ -431,7 +430,7 @@ const Home = () => {
             vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
             molestie.
           </p>
-          <CustomButton>Contact</CustomButton>
+          <CustomButton>Contact Us</CustomButton>
         </div>
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
@@ -449,7 +448,7 @@ Home.Wrapper = styled.div`
   .owl-stage {
     width: 200% !important;
   }
-  .owl-nav{
+  .owl-nav {
     display: flex;
     justify-content: flex-end;
     margin-top: 4rem;
@@ -460,12 +459,12 @@ Home.Wrapper = styled.div`
     height: 48px;
     background: rgba(97, 208, 255, 0.45) !important;
     border-radius: 10px;
-    color : white !important;
-    span{
+    color: #61d0ff !important;
+    span {
       font-size: 30px;
     }
   }
-  .owl-prev{
+  .owl-prev {
     margin-right: 2rem;
   }
   .hero {
@@ -483,12 +482,12 @@ Home.Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     .text {
-      width: 50%;
+      width: 45%;
       align-self: center;
       padding-left: 8rem;
       h1 {
         width: 100%;
-        font-size: 37px;
+        font-size:40px;
         line-height: 49px;
         color: #000d36;
         span {
@@ -575,9 +574,9 @@ Home.Wrapper = styled.div`
       position: absolute;
       left: 0;
       top: 7%;
-      width: 200px;
+      /* width: 200px; */
       img {
-        width: 70%;
+        /* width: 70%; */
       }
     }
     .text {
@@ -667,7 +666,7 @@ Home.Wrapper = styled.div`
         section {
           width: 100%;
           background: #fcfeff;
-          /* box-shadow: 15.4749px 25.7915px 41.2663px rgba(64, 64, 64, 0.05); */
+          box-shadow: 15.4749px 25.7915px 41.2663px rgba(64, 64, 64, 0.05);
           border-radius: 30px;
           padding: 1rem 1rem 2rem;
 
@@ -675,6 +674,10 @@ Home.Wrapper = styled.div`
             position: relative;
             left: 50px;
             top: 30px;
+          }
+          .none{
+            position: relative;
+            left: 20px;
           }
           div {
             border-radius: 20.6332px;
@@ -690,13 +693,15 @@ Home.Wrapper = styled.div`
             line-height: 24px;
             color: #000d36;
             margin: 1.5rem 0;
+            padding : 0 1rem;
           }
           p {
             font-weight: bold;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 17px;
             color: rgba(0, 13, 54, 0.45);
             margin: 1.5rem 0;
+            padding : 0 1rem;
           }
           a {
             color: #61d0ff;
@@ -704,6 +709,7 @@ Home.Wrapper = styled.div`
             font-weight: bold;
             font-size: 14px;
             line-height: 17px;
+            padding : 0 1rem;
           }
         }
       }
@@ -740,12 +746,15 @@ Home.Wrapper = styled.div`
         box-shadow: 15px 25px 40px rgba(64, 64, 64, 0.05);
         border-radius: 30px;
 
+        .read{
+          padding-bottom: 3rem;
+        }
         img {
           width: 100%;
         }
         p,
         h1 {
-          padding: 1rem;
+          padding: 1rem 2rem;
           font-weight: bold;
           font-size: 14px;
           line-height: 17px;
@@ -937,6 +946,85 @@ Home.Wrapper = styled.div`
       width: 40%;
       top: 0%;
       height: 911px;
+    }
+  }
+  @media (max-width: 768px) {
+   .owl-stage{
+    width: 1320px !important;
+   }
+    .blog,
+    .testimonial,
+    .partners,
+    .contact {
+      display: none;
+    }
+    .hero {
+      flex-direction: column;
+      padding: 2rem 0;
+      .hero-bg {
+        display: none;
+      }
+      .text {
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-top: 2rem;
+        h1 {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+    .what-we-do {
+      padding: 2rem;
+      margin : 4rem auto;
+      & > h1 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      & > p {
+        width: 100%;
+      }
+      .details-container {
+        flex-direction: column;
+        margin-top : 2rem;
+        .details{
+          width : 100%;
+          margin : 2rem auto;
+        }
+      }
+    }
+    .services-container{
+     padding : 2rem;
+     flex-direction : column;
+     .dotted-box{
+       display : none;
+     }
+     .text{
+      width: 100%;
+     }
+     .service{
+       width: 100%;
+       justify-content:space-between;
+       .container{
+        width: 35%;
+        &.mobile{
+          margin-bottom: 2rem;
+        }
+       }
+     }
+    }
+    .projects{
+      padding : 2rem;
+      flex-direction : column;
+      .text{
+        width : 100%;
+      }
+      .project{
+        width : 100%;
+        .container{
+        width: 320px;
+      }
+      }
     }
   }
 `;

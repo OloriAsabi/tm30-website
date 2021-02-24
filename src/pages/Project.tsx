@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import HeroSection from 'components/HeroSection';
+// import HeroSection from 'components/HeroSection';
 import React from 'react';
 import Elipse8p from 'assets/images/Ellipse 8@2x.png';
 import backUpImg from 'assets/images/Group 48.png';
@@ -120,7 +120,7 @@ Projects.Wrapper = styled.div`
     .text {
       align-self: center;
       margin-top: 8rem;
-      margin-left: 16rem; 
+      margin-left: 25rem; 
     }
     h1 {
       font-size: 40px;
@@ -230,14 +230,14 @@ Projects.Wrapper = styled.div`
     margin-top:-8rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     position: relative;
    
     .text {
       align-self: center;
       margin-top: 10rem;
-      margin-left: 16rem; 
+      margin-left: 25rem;
     }
     h1 {
       font-size: 40px;
@@ -254,6 +254,8 @@ Projects.Wrapper = styled.div`
 
     .pmbImg {
       width: 518px;
+      position: relative;
+      left: -20px;
     }
     .Group1 {
       position: absolute;

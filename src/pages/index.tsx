@@ -8,8 +8,8 @@ const Pages = (): any => {
   return (
     <Pages.Wrapper>
       <NavBar />
-      {convertRoutesToComponents(routes)}
-      <Footer />
+     {convertRoutesToComponents(routes)}
+       <Footer />
     </Pages.Wrapper>
   );
 };

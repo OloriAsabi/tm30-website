@@ -203,7 +203,7 @@ Services.Wrapper = styled.div`
       background: #fcfeff;
       box-shadow: 15px 25px 40px rgba(64, 64, 64, 0.05);
       border-radius: 30px;
-      padding: 3rem;
+      padding: 5rem;
       margin: 2rem 0.8rem;
       h1 {
         margin: 1rem auto;
