@@ -494,7 +494,7 @@ Home.Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     .text {
-      width: 45%;
+      /* width: 45%; */
       align-self: center;
       padding-left: 8rem;
       h1 {
@@ -515,7 +515,7 @@ Home.Wrapper = styled.div`
       }
     }
     .hero-bg {
-      height: 576px;
+      height: 641px;
       width: 56%;
     }
   }
