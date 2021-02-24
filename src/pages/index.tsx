@@ -17,7 +17,7 @@ const Pages = (): any => {
 export default Pages;
 
 Pages.Wrapper = styled.div`
-  display: grid;
-  grid-auto-rows : 65px auto 300px;
-  height: 100%;
+  /* display: grid;
+   /*grid-auto-rows : 65px auto 300px;
+  height: 100%; */ 
 `;

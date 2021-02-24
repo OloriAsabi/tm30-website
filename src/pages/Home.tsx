@@ -32,33 +32,27 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import est from 'assets/images/Dashboard 1.png';
-import { LeftArrow } from 'components/Arrow';
+
 
 const options = {
-  margin: 10,
-  responsiveClass: true,
-  nav: true,
-  autoplay: false,
-  // navText: ["<" , '>'],
-  smartSpeed: 1000,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    400: {
-      items: 1,
-    },
-    600: {
-      items: 2,
-    },
-    750: {
-      items: 2,
-    },
-    1250: {
-      items: 3,
-    },
-  },
-};
+  loop: false,
+  margin:10,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      300: {
+        items: 1
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:3
+      }
+  }
+}
 
 let allProjects = [
   {
@@ -153,7 +147,6 @@ const Home = () => {
         setData(allProjects);
         break;
     }
-    console.log(activeTab, allProjects);
   }, [activeTab]);
 
   let arrow = '>';
@@ -316,7 +309,7 @@ const Home = () => {
           </div>
           <div className="container">
             <OwlCarousel
-              className="slider-items owl-carousel"
+             
               {...options}
               key={data.length}
             >
@@ -341,6 +334,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+    
+      
       <div className="blog">
         <div className="header">
           <h1>Explore Our Blog</h1>
@@ -381,6 +376,25 @@ const Home = () => {
             vulputate
           </p>
         </div>
+          <OwlCarousel items={1} nav>
+          <div className="container">
+          <div className="text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
+              vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
+              molestie.
+            </p>
+            <img src={Elipse8} alt="" />
+          </div>
+          <div className="profile">
+            <img src={Elipse9} alt="" />
+            <div>
+              <h2>Jeremiah Fasasi</h2>
+              <p>CEO Fas Media</p>
+            </div>
+          </div>
+        </div>
+
         <div className="container">
           <div className="text">
             <p>
@@ -398,6 +412,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+          </OwlCarousel>      
       </div>
       <div className="partners">
         <div className="text">
@@ -445,14 +460,11 @@ Home.Wrapper = styled.div`
     border-bottom: 1px solid green;
   }
 
-  .owl-stage {
-    width: 200% !important;
-  }
   .owl-nav {
     display: flex;
     justify-content: flex-end;
     margin-top: 4rem;
-  }
+  } 
   .owl-prev,
   .owl-next {
     width: 48px;
@@ -666,7 +678,7 @@ Home.Wrapper = styled.div`
         section {
           width: 100%;
           background: #fcfeff;
-          box-shadow: 15.4749px 25.7915px 41.2663px rgba(64, 64, 64, 0.05);
+          /* box-shadow: 15.4749px 25.7915px 41.2663px rgba(64, 64, 64, 0.05); */
           border-radius: 30px;
           padding: 1rem 1rem 2rem;
 
@@ -799,6 +811,7 @@ Home.Wrapper = styled.div`
       display: flex;
       justify-content: space-around;
       align-items: center;
+      height: 350px;
       .text {
         width: 35%;
         background: #fcfeff;
@@ -817,7 +830,8 @@ Home.Wrapper = styled.div`
           position: absolute;
           z-index: -1;
           left: 42%;
-          top: 60%;
+          top: 50%;
+          width: 164px;
         }
       }
     }
@@ -826,6 +840,9 @@ Home.Wrapper = styled.div`
       display: flex;
       /* justify-content: space-around; */
       align-items: center;
+      img{
+        width : 64px;
+      }
       div {
         margin-left: 1rem;
       }
@@ -841,6 +858,10 @@ Home.Wrapper = styled.div`
         color: rgba(0, 13, 54, 0.45);
       }
     }
+    .owl-nav{
+      padding-right: 8rem;
+      margin-top: 0;
+    }
   }
   .partners {
     height: 500px;
@@ -848,7 +869,7 @@ Home.Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 10rem 0 4rem 0;
+    margin: 1rem 0 4rem 0;
     .text {
       text-align: center;
       h1 {
@@ -949,9 +970,9 @@ Home.Wrapper = styled.div`
     }
   }
   @media (max-width: 768px) {
-   .owl-stage{
+   /* .owl-stage{
     width: 1320px !important;
-   }
+   } */
     .blog,
     .testimonial,
     .partners,
@@ -1018,6 +1039,7 @@ Home.Wrapper = styled.div`
       flex-direction : column;
       .text{
         width : 100%;
+        margin-bottom: 4rem;
       }
       .project{
         width : 100%;
