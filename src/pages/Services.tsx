@@ -135,7 +135,6 @@ const Services = () => {
         </div>
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
-    
     </Services.Wrapper>
   );
 };
@@ -261,6 +260,69 @@ Services.Wrapper = styled.div`
       width: 40%;
       top: 0%;
       height: 911px;
+    }
+  }
+  @media (max-width: 768px) {
+    .what-we-do {
+      padding: 2rem;
+      margin: 3rem 0;
+      .details-container {
+        margin: 1rem 0;
+        flex-direction: column;
+        .details {
+          width: 100%;
+          margin: 2rem 0;
+          .text {
+            margin-left: 2rem;
+          }
+        }
+      }
+    }
+    .what-we {
+      margin: 1rem 0;
+    }
+    .contact {
+      padding: 2rem;
+      flex-direction: column;
+      .first {
+        .dottedBox {
+          display: none;
+        }
+        .lady {
+          width: 100%;
+        }
+        .Elipse8 {
+          display: none;
+        }
+      }
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 20px;
+          margin-top: 3rem;
+        }
+        p {
+          width: 100%;
+        }
+      }
+      .ellipse1 {
+        display: none;
+      }
+    }
+    .services {
+      padding: 2rem;
+      flex-direction: column;
+      & > * {
+        width: 100%;
+        padding: 2rem;
+        margin: 2rem 0;
+        h1 {
+          margin: 2rem 0;
+        }
+        p {
+          width: 100%;
+        }
+      }
     }
   }
 `;

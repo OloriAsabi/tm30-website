@@ -80,7 +80,7 @@ const Contact = () => {
 export default Contact;
 
 Contact.Wrapper = styled.div`
-  .wrapper {
+  .wraapper {
     position: relative;
   }
   .bg {
@@ -203,6 +203,40 @@ Contact.Wrapper = styled.div`
           font-size: 14px;
           line-height: 28px;
           color: rgba(0, 13, 54, 0.45);
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .hero {
+      width: 100%;
+      padding: 2rem;
+      /* margin: 2rem auto; */
+      & > p {
+        width: 100%;
+      }
+    }
+    form {
+      position: static;
+      margin-top: 15rem;
+      width: 100%;
+      padding: 2rem;
+      .inputs {
+        flex-direction: column;
+        & > * {
+          margin: 1rem 0;
+        }
+      }
+      input {
+        width: 100%;
+      }
+    }
+    .get-in-touch {
+      .devices {
+        flex-direction: column;
+        width: 100%;
+        .header {
+          margin: 2rem 0;
         }
       }
     }

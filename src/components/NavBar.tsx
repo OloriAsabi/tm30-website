@@ -47,14 +47,25 @@ const NavBar = () => {
       <div className="logo" onClick={() => history.push(HOME)}>
         <img src={Logo} alt="tm30" />
       </div>
-      <div className="menu-icon" onClick={() => setShow(!show)}>
-        <i className={show ? 'fas fa-times' : 'fas fa-bars'}></i>
+      <div className="menu-icon" onClick={() => setShow(true)}>
+        <i className="fas fa-bars"></i>
       </div>
 
       <div className={`links ${show ? 'show' : 'hide'}`}>
+        <div
+          className="menu-icon close-icon"
+          onClick={() => setShow(false)}
+          style={{ textAlign: 'end' }}
+        >
+          <i className="fas fa-times"></i>
+        </div>
         {Links.map((link) =>
           link.name === 'blog' ? (
-            <Link to={{ pathname: 'https://medium.com/@tm30' }} target="_blank" key={link.name}>
+            <Link
+              to={{ pathname: 'https://medium.com/@tm30' }}
+              target="_blank"
+              key={link.name}
+            >
               {link.name}
             </Link>
           ) : (
@@ -62,6 +73,7 @@ const NavBar = () => {
               to={link.route}
               className={path.includes(link.name) ? `active` : ''}
               key={link.name}
+              onClick={() => setShow(false)}
             >
               {link.name}
             </Link>
@@ -103,39 +115,36 @@ NavBar.Wrapper = styled.nav`
   .active {
     border-bottom: 2px solid #61d0ff;
   }
-  .fas{
-    display : none;
+  .fas {
+    display: none;
   }
   @media (max-width: 768px) {
-    padding : 1.5rem;
-    justify-content: space-between;
+    padding: 1.5rem;
+    /* justify-content: space-between; */
     align-items: center;
     .hide {
       display: none;
     }
-    .fas{
+    .fas {
       font-size: 25px;
-      display:  block;
+      display: block;
       cursor: pointer;
     }
     .links {
+      padding: 2rem;
       flex-direction: column;
-      position: absolute;
-      top: 120%;
-      a{
-        margin :  1rem 0;
+      position: fixed;
+      top: 0%;
+      z-index: 5;
+      background-color: white;
+      width: 100%;
+      left: 0;
+      height: 100vh;
+      justify-content: normal;
+      a {
+        margin: 2rem 0;
         width: fit-content;
       }
-      /* padding: 2rem;
-      padding-top: 5rem; */
-      /* position: absolute;
-      top: -120%; */
-      /* left: 0;
-      width: 100%;
-      z-index: 20;
-      height: 100vh; */
-      /* background: white;
-      display: block; */
     }
   }
 `;

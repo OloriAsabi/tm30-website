@@ -33,26 +33,25 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import est from 'assets/images/Dashboard 1.png';
 
-
 const options = {
   loop: false,
-  margin:10,
-  nav:true,
-  responsive:{
-      0:{
-          items:1
-      },
-      300: {
-        items: 1
-      },
-      600:{
-          items:2
-      },
-      1000:{
-          items:3
-      }
-  }
-}
+  margin: 10,
+  nav: true,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    300: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+};
 
 let allProjects = [
   {
@@ -308,11 +307,7 @@ const Home = () => {
             </p>
           </div>
           <div className="container">
-            <OwlCarousel
-             
-              {...options}
-              key={data.length}
-            >
+            <OwlCarousel {...options} key={data.length}>
               {data.map((proj) => (
                 <section key={proj.name}>
                   <div
@@ -322,7 +317,7 @@ const Home = () => {
                     <img
                       src={proj.image}
                       alt=""
-                      className={`${proj.addMargin ? 'edu' : "none"}`}
+                      className={`${proj.addMargin ? 'edu' : 'none'}`}
                     />
                   </div>
                   <h2>{proj.name}</h2>
@@ -334,8 +329,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    
-      
+
       <div className="blog">
         <div className="header">
           <h1>Explore Our Blog</h1>
@@ -376,43 +370,43 @@ const Home = () => {
             vulputate
           </p>
         </div>
-          <OwlCarousel items={1} nav>
+        <OwlCarousel items={1} nav>
           <div className="container">
-          <div className="text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-              vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
-              molestie.
-            </p>
-            <img src={Elipse8} alt="" />
-          </div>
-          <div className="profile">
-            <img src={Elipse9} alt="" />
-            <div>
-              <h2>Jeremiah Fasasi</h2>
-              <p>CEO Fas Media</p>
+            <div className="text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
+                sed vulputate tellus pellentesque tempor. Vitae leo cras eu
+                vitae molestie.
+              </p>
+              <img src={Elipse8} alt="" />
+            </div>
+            <div className="profile">
+              <img src={Elipse9} alt="" />
+              <div>
+                <h2>Jeremiah Fasasi</h2>
+                <p>CEO Fas Media</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="container">
-          <div className="text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-              vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
-              molestie.
-            </p>
-            <img src={Elipse8} alt="" />
-          </div>
-          <div className="profile">
-            <img src={Elipse9} alt="" />
-            <div>
-              <h2>Jeremiah Fasasi</h2>
-              <p>CEO Fas Media</p>
+          <div className="container">
+            <div className="text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
+                sed vulputate tellus pellentesque tempor. Vitae leo cras eu
+                vitae molestie.
+              </p>
+              <img src={Elipse8} alt="" />
+            </div>
+            <div className="profile">
+              <img src={Elipse9} alt="" />
+              <div>
+                <h2>Jeremiah Fasasi</h2>
+                <p>CEO Fas Media</p>
+              </div>
             </div>
           </div>
-        </div>
-          </OwlCarousel>      
+        </OwlCarousel>
       </div>
       <div className="partners">
         <div className="text">
@@ -464,7 +458,7 @@ Home.Wrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-top: 4rem;
-  } 
+  }
   .owl-prev,
   .owl-next {
     width: 48px;
@@ -499,7 +493,7 @@ Home.Wrapper = styled.div`
       padding-left: 8rem;
       h1 {
         width: 100%;
-        font-size:40px;
+        font-size: 40px;
         line-height: 49px;
         color: #000d36;
         span {
@@ -687,7 +681,7 @@ Home.Wrapper = styled.div`
             left: 50px;
             top: 30px;
           }
-          .none{
+          .none {
             position: relative;
             left: 20px;
           }
@@ -705,7 +699,7 @@ Home.Wrapper = styled.div`
             line-height: 24px;
             color: #000d36;
             margin: 1.5rem 0;
-            padding : 0 1rem;
+            padding: 0 1rem;
           }
           p {
             font-weight: bold;
@@ -713,7 +707,7 @@ Home.Wrapper = styled.div`
             line-height: 17px;
             color: rgba(0, 13, 54, 0.45);
             margin: 1.5rem 0;
-            padding : 0 1rem;
+            padding: 0 1rem;
           }
           a {
             color: #61d0ff;
@@ -721,7 +715,7 @@ Home.Wrapper = styled.div`
             font-weight: bold;
             font-size: 14px;
             line-height: 17px;
-            padding : 0 1rem;
+            padding: 0 1rem;
           }
         }
       }
@@ -758,7 +752,7 @@ Home.Wrapper = styled.div`
         box-shadow: 15px 25px 40px rgba(64, 64, 64, 0.05);
         border-radius: 30px;
 
-        .read{
+        .read {
           padding-bottom: 3rem;
         }
         img {
@@ -840,8 +834,8 @@ Home.Wrapper = styled.div`
       display: flex;
       /* justify-content: space-around; */
       align-items: center;
-      img{
-        width : 64px;
+      img {
+        width: 64px;
       }
       div {
         margin-left: 1rem;
@@ -858,7 +852,7 @@ Home.Wrapper = styled.div`
         color: rgba(0, 13, 54, 0.45);
       }
     }
-    .owl-nav{
+    .owl-nav {
       padding-right: 8rem;
       margin-top: 0;
     }
@@ -970,15 +964,6 @@ Home.Wrapper = styled.div`
     }
   }
   @media (max-width: 768px) {
-   /* .owl-stage{
-    width: 1320px !important;
-   } */
-    .blog,
-    .testimonial,
-    .partners,
-    .contact {
-      display: none;
-    }
     .hero {
       flex-direction: column;
       padding: 2rem 0;
@@ -997,7 +982,7 @@ Home.Wrapper = styled.div`
     }
     .what-we-do {
       padding: 2rem;
-      margin : 4rem auto;
+      margin: 4rem auto;
       & > h1 {
         font-size: 20px;
         line-height: 30px;
@@ -1007,45 +992,148 @@ Home.Wrapper = styled.div`
       }
       .details-container {
         flex-direction: column;
-        margin-top : 2rem;
-        .details{
-          width : 100%;
-          margin : 2rem auto;
+        margin-top: 2rem;
+        .details {
+          width: 100%;
+          margin: 2rem auto;
         }
       }
     }
-    .services-container{
-     padding : 2rem;
-     flex-direction : column;
-     .dotted-box{
-       display : none;
-     }
-     .text{
-      width: 100%;
-     }
-     .service{
-       width: 100%;
-       justify-content:space-between;
-       .container{
-        width: 35%;
-        &.mobile{
-          margin-bottom: 2rem;
+    .services-container {
+      padding: 2rem;
+      flex-direction: column;
+      .dotted-box {
+        display: none;
+      }
+      .text {
+        width: 100%;
+      }
+      .service {
+        width: 100%;
+        justify-content: space-between;
+        .container {
+          width: 35%;
+          h1 {
+            font-size: 15px;
+          }
+          &.mobile {
+            margin-bottom: 2rem;
+          }
         }
-       }
-     }
+      }
     }
-    .projects{
-      padding : 2rem;
-      flex-direction : column;
-      .text{
-        width : 100%;
+    .projects {
+      padding: 2rem;
+      flex-direction: column;
+      .text {
+        width: 100%;
         margin-bottom: 4rem;
       }
-      .project{
-        width : 100%;
-        .container{
-        width: 320px;
+      .project {
+        width: 100%;
+        .container {
+          width: 100%;
+        }
       }
+    }
+    .blog {
+      padding: 2rem;
+      .header h1 {
+        font-size: 20px;
+      }
+      .header p {
+        width: 100%;
+      }
+      .blogs {
+        padding: 0;
+        flex-direction: column;
+        .single-blog {
+          width: 100%;
+          margin: 2rem auto;
+        }
+      }
+    }
+    .testimonial {
+      margin: 1rem 0 1rem;
+      padding: 2rem;
+      .owl-nav {
+        padding-right: 0;
+      }
+      .header h1 {
+        font-size: 20px;
+      }
+      .header p {
+        width: 100%;
+      }
+      .container {
+        flex-direction: column;
+        .text {
+          width: 100%;
+          padding: 2rem;
+          margin-left: 0;
+          box-shadow: 5px 15px 20px rgb(64 64 64 / 5%);
+          img {
+            display: none;
+          }
+        }
+        .profile {
+          width: 100%;
+        }
+      }
+    }
+    .partners {
+      padding: 2rem;
+      .text h1 {
+        font-size: 20px;
+      }
+      .text p {
+        width: 100%;
+      }
+      .client1 {
+        top: 0;
+      }
+      .client7 {
+        right: 0;
+      }
+      .client2 {
+        left: 40%;
+        top: 10%;
+      }
+      .client6 {
+        top: 32%;
+        right: 2%;
+      }
+      .client3 {
+        top: 20%;
+        left: 0;
+      }
+    }
+    .contact {
+      padding: 2rem;
+      flex-direction: column;
+      .first {
+        .dottedBox {
+          display: none;
+        }
+        .lady {
+          width: 100%;
+        }
+        .Elipse8 {
+          display: none;
+        }
+      }
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 20px;
+          margin-top: 3rem;
+        }
+        p {
+          width: 100%;
+        }
+      }
+      .ellipse1 {
+        display: none;
       }
     }
   }

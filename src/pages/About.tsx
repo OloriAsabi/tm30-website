@@ -251,4 +251,58 @@ About.Wrapper = styled.div`
       z-index: -1;
     }
   }
+  @media (max-width: 768px) {
+    .heading {
+      padding: 0 2rem;
+      margin-top: 2rem;
+    }
+    .sub-heading {
+      font-size: 20px;
+      padding: 0 2rem;
+    }
+    .core_values {
+      flex-direction: column;
+      margin: 0 2rem 16rem;
+      & > * {
+        width: 100%;
+        &.container p {
+          width: 100%;
+        }
+      }
+    }
+    .mission {
+      margin: 3rem auto;
+      img {
+        top: -60%;
+      }
+      .text {
+        width: 100%;
+        h1 {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .team {
+      margin: 0;
+      padding: 2rem;
+      .dottedBox2 {
+        display: none;
+      }
+      .ellipse1 {
+        display: none;
+      }
+      .header {
+      }
+      .body {
+        margin-top: 4rem;
+        width: 100%;
+        flex-direction: column;
+        & > * {
+          width: 100%;
+          margin: 2rem 0;
+        }
+      }
+    }
+  }
 `;

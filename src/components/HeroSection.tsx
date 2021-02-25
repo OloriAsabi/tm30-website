@@ -72,4 +72,14 @@ HeroSection.Wrapper = styled.div`
     /* height: 576px; */
     width: 56%;
   }
+  @media (max-width: 768px) {
+    .left-arc,
+    .hero-bg {
+      display: none;
+    }
+    .text {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
 `;

@@ -262,4 +262,85 @@ Projects.Wrapper = styled.div`
       z-index: -1;
     }
   }
+  @media(max-width : 760px){
+  .est{
+    padding : 2rem;
+     margin-top: 2rem;
+    flex-direction: column;
+       p{
+        width : 100%;
+       }
+       .Group1{
+         display :  none;
+       }
+       .pmbImg{
+         width : 100%;
+         margin-top: 3rem;
+       }
+       .text{
+         margin-left: 0;
+         margin-top: 0;
+       }
+       .ellipse1{
+         display : none;
+       }
+   } 
+   .hero{
+     padding : 2rem;
+     & > p{
+       width : 100%;
+     }
+     .pmb{
+       flex-direction: column;
+       p{
+        width : 100%;
+       }
+       .Group1{
+         display :  none;
+       }
+       .pmbImg{
+         width : 100%;
+       }
+       .text{
+         margin-left: 0;
+       }
+     }
+
+   }
+   .backup{
+    padding : 2rem;
+     margin-top: 30rem;
+    flex-direction: column;
+       p{
+        width : 100%;
+       }
+       .Group1{
+         display :  none;
+       }
+       .pmbImg{
+         width : 100%;
+       }
+       .text{
+         margin-left: 0;
+       }
+   }
+   .edu{
+    padding : 2rem;
+     margin-top: 3rem;
+    flex-direction: column;
+       p{
+        width : 100%;
+       }
+       .Group1{
+         display :  none;
+       }
+       .pmbImg{
+         width : 100%;
+       }
+       .text{
+         margin-left: 0;
+         margin-top: 0;
+       }
+   }
+  }
 `;

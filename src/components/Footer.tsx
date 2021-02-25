@@ -7,7 +7,6 @@ import FB from 'assets/icons/Vector (12).png';
 import twitter from 'assets/icons/Vector (14).png';
 import LinkedIn from 'assets/icons/Vector (13).png';
 
-
 const Footer = () => {
   let date = new Date();
   let currentYear = date.getFullYear();
@@ -121,5 +120,24 @@ Footer.Wrapper = styled.footer`
       font-size: 14px;
       line-height: 24px;
     }
+  }
+  @media (max-width: 768px) {
+    height: auto;
+    .foo {
+      padding: 2rem;
+      flex-wrap: wrap;
+      .first {
+        width: 100%;
+      }
+      .second {
+        width: 100%;
+      }
+    }
+    .last-text {
+      padding: 2rem;
+      flex-direction: column;
+      align-items: center;
+    }
+    padding-bottom: 0;
   }
 `;
