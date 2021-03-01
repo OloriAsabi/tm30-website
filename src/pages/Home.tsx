@@ -165,10 +165,7 @@ const Home = () => {
           <p>
             We build custom applications, social applications, widgets, mobile
             apps and dynamic websites which enables businesses to push out their
-            brand and interact with their client.We build custom applications,
-            social applications, widgets, mobile apps and dynamic websites which
-            enables businesses to push out their brand and interact with their
-            client
+            brand and interact with their client.
           </p>
           <CustomButton onClick={() => history.push(ABOUT)}>
             About Us
