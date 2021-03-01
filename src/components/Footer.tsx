@@ -18,13 +18,13 @@ const Footer = () => {
           <p>
             Address: 22 Berkley Street, Lagos Island, <br /> Lagos
           </p>
-          <p>Phone: +234 812 3456 789</p>
+          <p>Phone: +234 80 3467 8549</p>
           <p>Email: contact@tm30.net</p>
         </div>
         <div className="second">
           <div className="quick">
             <h3 className="heading">Quick links</h3>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/services">Services</Link>
             <Link to="/projects">Project</Link>
@@ -34,10 +34,24 @@ const Footer = () => {
           <div className="social">
             <h3 className="heading">Socila Links</h3>
             <div className="social-icons">
-              <img src={IG} alt="ig" />
-              <img src={FB} alt="fb" />
-              <img src={twitter} alt="twitter" />
-              <img src={LinkedIn} alt="linkedin" />
+              <Link
+               to={{ pathname: 'https://web.facebook.com/TM30Global' }}
+                target="_blank"
+              >
+                <img src={FB} alt="fb" />
+              </Link>
+              <Link
+                 to={{ pathname: 'https://twitter.com/TM30Global' }}
+                target="_blank"
+              >
+                <img src={twitter} alt="twitter" />
+              </Link>
+              <Link
+                to={{ pathname: ' https://www.linkedin.com/company/tm30/' }}
+                target="_blank"
+              >
+                <img src={LinkedIn} alt="linkedin" />
+              </Link>
             </div>
           </div>
         </div>

@@ -18,27 +18,27 @@ const values = [
   {
     image: solutions,
     header: 'Solutions',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.',
+    text: 'We develop solutions for your business everyday needs',
   },
   {
     image: possibilities,
     header: 'Possibilities',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.',
+    text: 'Difficulty does not exist in our reality.',
   },
   {
     image: innovation,
     header: 'Innovation',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.',
+    text: 'We are continually drawing out the best arrangements in the best innovative manner.',
   },
   {
     image: Creativivty,
     header: 'Creativity',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.',
+    text: 'We are continually drawing out the best arrangements in the best innovative manner.',
   },
   {
     image: Excellence,
     header: 'Excellence',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.',
+    text: 'We do not settle for less. Excellence  is our norm.',
   },
 ];
 
@@ -78,13 +78,15 @@ const staffs = [
 const About = () => {
   return (
     <About.Wrapper>
-      <HeroSection
-        bg="linear-gradient(178.13deg, #61D0FF 1.56%, rgba(240, 250, 255, 0) 100.8%)"
-        h1Text="Who we are"
-        pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque facilisis porttitor in dui magna blandit lorem pellentesque. Orci sed enim egestas enim nulla enim accumsan. Sed tellus vivamus massa proin nascetur et. Vestibulum vel semper sed curabitur sed integer. Risus amet, ac tellus egestas eu mi viverra."
-        subText="About us"
-        heroImg={BG}
-      />
+      <div>
+        <HeroSection
+          bg="linear-gradient(178.13deg, #61D0FF 1.56%, rgba(240, 250, 255, 0) 100.8%)"
+          h1Text="Who we are"
+          pText="We are a software company with strong technical expertise in developing innovative solutions that drive digital transformation in the IT industry. Leveraging our experience, we deliver our solutions with flexibility, responsiveness, efficiency and unmatched performance which has made us one of the most sought after technology company."       
+          subText="About us"
+          heroImg={BG}
+        />
+      </div>
       <p className="heading">We embrace the S.P.I.C.E values</p>
       <h1 className="sub-heading">Our Core Values</h1>
       <div className="core_values">
@@ -101,10 +103,9 @@ const About = () => {
         <div className="text">
           <h1>Our Mission & Vision</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis porttitor in dui magna blandit lorem
-            pellentesque. Orci sed enim egestas enim nulla enim accumsan. Sed
-            tellus vivamus massa proin nascetur et
+        Our Mission is to deliver innovative technology solutions that are essential to the way people and businesses work. Our Vision is to be a leading software company in Africa.
+
+
           </p>
         </div>
       </div>

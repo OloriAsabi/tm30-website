@@ -11,14 +11,17 @@ import { CustomButton } from 'reusables/CustomButton';
 import Elipse8 from 'assets/images/Ellipse 8.png';
 import Group4 from 'assets/images/Group 4.png';
 import RectangleWoman from 'assets/images/Rectangle 463.png';
+import { useHistory } from 'react-router-dom';
+import { CONTACT } from './pagesPath';
 
 const Services = () => {
+  const history = useHistory()
   return (
     <Services.Wrapper>
       <HeroSection
         bg="linear-gradient(178.13deg, #61D0FF 1.56%, rgba(240, 250, 255, 0) 100.8%)"
         h1Text="What we do"
-        pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque facilisis porttitor in dui magna blandit lorem pellentesque. Orci sed enim egestas enim nulla enim accumsan."
+        pText="We build custom applications, social applications, widgets, mobile apps and dynamic websites which enables businesses to push out their brand and interact with their client."
         subText="Our Services"
         heroImg={BG}
       />
@@ -67,9 +70,7 @@ const Services = () => {
           </div>
           <h1>Web Development</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis porttitor in dui magna blandit lorem
-            pellentesque.
+          At TM30, we develop custom-made solutions that meets the requirements of our clients. From prototyping, to design, develop and support, we deliver a solution that will gain market acceptance after launch.
           </p>
         </div>
         <div className="container mobile">
@@ -78,9 +79,7 @@ const Services = () => {
           </div>
           <h1>Mobile Development</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis porttitor in dui magna blandit lorem
-            pellentesque.
+          With increasing demand and usage of mobile phones, designing a purpose built app for your business and organization opens up endless opportunities. 
           </p>
         </div>
         <div className="container">
@@ -89,9 +88,7 @@ const Services = () => {
           </div>
           <h1>Software Integration</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis porttitor in dui magna blandit lorem
-            pellentesque.
+          We bring together various types of software sub-systems so that they create a unified single system for businesses and brands
           </p>
         </div>
 
@@ -101,9 +98,7 @@ const Services = () => {
           </div>
           <h1>UI/UX Design</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis porttitor in dui magna blandit lorem
-            pellentesque.
+          We carefully plan wonderful, natural interfaces that are straightforward and awesome to utilize, we also sketch, model, repeat, plan and test to produce useful experiences
           </p>
         </div>
         <div className="container">
@@ -112,9 +107,9 @@ const Services = () => {
           </div>
           <h1>IT Consulting</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis porttitor in dui magna blandit lorem
-            pellentesque.
+            Through our consulting services, we develop initiatives, structures
+            and solutions that you need to get the most out of your IT
+            investment. 
           </p>
         </div>
       </div>
@@ -127,11 +122,9 @@ const Services = () => {
         <div className="text">
           <h1>Get In Touch With Us</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-            vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
-            molestie.
+          Are you ready to start your next project, contact us below
           </p>
-          <CustomButton>Contact</CustomButton>
+          <CustomButton onClick={() => history.push(CONTACT)}>Contact</CustomButton>
         </div>
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
@@ -202,10 +195,10 @@ Services.Wrapper = styled.div`
       background: #fcfeff;
       box-shadow: 15px 25px 40px rgba(64, 64, 64, 0.05);
       border-radius: 30px;
-      padding: 5rem;
+      padding: 3rem;
       margin: 2rem 0.8rem;
       h1 {
-        margin: 1rem auto;
+        margin: 2rem auto;
       }
       p {
         font-weight: bold;

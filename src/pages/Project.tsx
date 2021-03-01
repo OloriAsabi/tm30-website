@@ -17,9 +17,7 @@ const Projects = () => {
         <img src={Elipse8p} alt="arc" className="left-arc" />
         <h1>Projects</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          pellentesque facilisis porttitor in dui magna blandit lorem
-          pellentesque.
+        Take a look at our past projects.
         </p>
         <div className="pmb">
         <div className="text">

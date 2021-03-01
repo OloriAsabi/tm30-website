@@ -14,9 +14,7 @@ const Contact = () => {
         <div className="hero">
           <h1>Contact Us</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis porttitor in dui magna blandit lorem
-            pellentesque.
+          Are you ready to start your next project, contact us below.
           </p>
         </div>
         <form>

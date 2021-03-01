@@ -10,7 +10,8 @@ import mobile from 'assets/icons/Group 30.png';
 import PMB from 'assets/images/PMB_Home 1.png';
 import eduSpons from 'assets/images/eduspons.png';
 import backup from 'assets/images/ios backup cash 1.png';
-import { Link } from 'react-router-dom';
+import uiux from 'assets/images/Group 48.svg'
+import { Link, useHistory } from 'react-router-dom';
 import blog1 from 'assets/images/Rectangle 495.png';
 import blog2 from 'assets/images/Rectangle 496.png';
 import blog3 from 'assets/images/Rectangle 497.png';
@@ -32,6 +33,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import est from 'assets/images/Dashboard 1.png';
+import { ABOUT, CONTACT } from './pagesPath';
 
 const options = {
   loop: false,
@@ -129,6 +131,8 @@ let mobileProjects = [
 const Home = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [data, setData] = useState(allProjects);
+  const [hover, setHover] = useState('');
+  const history = useHistory();
 
   const handleClick = (tab: any) => {
     setActiveTab(tab);
@@ -159,11 +163,16 @@ const Home = () => {
             solutions
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis porttitor in dui magna blandit lorem
-            pellentesque. Orci sed enim egestas enim nulla enim accumsan.
+            We build custom applications, social applications, widgets, mobile
+            apps and dynamic websites which enables businesses to push out their
+            brand and interact with their client.We build custom applications,
+            social applications, widgets, mobile apps and dynamic websites which
+            enables businesses to push out their brand and interact with their
+            client
           </p>
-          <CustomButton>About Us</CustomButton>
+          <CustomButton onClick={() => history.push(ABOUT)}>
+            About Us
+          </CustomButton>
         </div>
         <img src={heroBg} className="hero-bg" alt="" />
       </div>
@@ -175,7 +184,12 @@ const Home = () => {
           molestie.
         </p>
         <div className="details-container">
-          <div className="details">
+          <div
+            className="details"
+            onMouseEnter={() => setHover('first')}
+            onMouseLeave={() => setHover('')}
+            style={{ background: `${hover === 'first' ? 'white' : '#f5fcff'}` }}
+          >
             <div className="first">
               <img src={Dev} alt="" />
             </div>
@@ -186,7 +200,14 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="details">
+          <div
+            className="details"
+            onMouseEnter={() => setHover('second')}
+            onMouseLeave={() => setHover('')}
+            style={{
+              background: `${hover === 'second' ? 'white' : '#f5fcff'}`,
+            }}
+          >
             <div className="first">
               {' '}
               <img src={Training} alt="" />
@@ -198,7 +219,12 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="details">
+          <div
+            className="details"
+            onMouseEnter={() => setHover('third')}
+            onMouseLeave={() => setHover('')}
+            style={{ background: `${hover === 'third' ? 'white' : '#f5fcff'}` }}
+          >
             <div className="first">
               {' '}
               <img src={Consulting} alt="" />
@@ -226,8 +252,20 @@ const Home = () => {
           <CustomButton>Discover</CustomButton>
         </div>
         <div className="service">
-          <div className="container">
-            <div className="first">
+          <div
+            className="container"
+            onMouseEnter={() => setHover('fourth')}
+            onMouseLeave={() => setHover('')}
+            style={{
+              background: `${hover === 'fourth' ? 'white' : '#f5fcff'}`,
+            }}
+          >
+            <div
+              className="first"
+              style={{
+                background: `${hover !== 'fourth' ? 'white' : '#f5fcff'}`,
+              }}
+            >
               {' '}
               <img src={Dev} alt="" />
             </div>
@@ -235,16 +273,40 @@ const Home = () => {
               Web <br /> Development
             </h1>
           </div>
-          <div className="container mobile">
-            <div className="first">
+          <div
+            className="container mobile"
+            onMouseEnter={() => setHover('fifth')}
+            onMouseLeave={() => setHover('')}
+            style={{
+              background: `${hover === 'fifth' ? 'white' : '#f5fcff'}`,
+            }}
+          >
+            <div
+              className="first"
+              style={{
+                background: `${hover !== 'fifth' ? 'white' : '#f5fcff'}`,
+              }}
+            >
               <img src={mobile} className="" alt="" />
             </div>
             <h1>
               Mobile <br /> Development
             </h1>
           </div>
-          <div className="container">
-            <div className="first">
+          <div
+            className="container"
+            onMouseEnter={() => setHover('eight')}
+            onMouseLeave={() => setHover('')}
+            style={{
+              background: `${hover === 'eight' ? 'white' : '#f5fcff'}`,
+            }}
+          >
+            <div
+              className="first"
+              style={{
+                background: `${hover !== 'eight' ? 'white' : '#f5fcff'}`,
+              }}
+            >
               {' '}
               <img src={Dev} alt="" />
             </div>
@@ -253,18 +315,42 @@ const Home = () => {
             </h1>
           </div>
 
-          <div className="container">
-            <div className="first">
+          <div
+            className="container ui"
+            onMouseEnter={() => setHover('sixth')}
+            onMouseLeave={() => setHover('')}
+            style={{
+              background: `${hover === 'sixth' ? 'white' : '#f5fcff'}`,
+            }}
+          >
+            <div
+              className="first"
+              style={{
+                background: `${hover !== 'sixth' ? 'white' : '#f5fcff'}`,
+              }}
+            >
               {' '}
-              <img src={Training} alt="" />
+              <img src={uiux} alt="" />
             </div>
             <h1>
               UI/UX <br />
               Design
             </h1>
           </div>
-          <div className="container">
-            <div className="first">
+          <div
+            className="container"
+            onMouseEnter={() => setHover('seven')}
+            onMouseLeave={() => setHover('')}
+            style={{
+              background: `${hover === 'seven' ? 'white' : '#f5fcff'}`,
+            }}
+          >
+            <div
+              className="first"
+              style={{
+                background: `${hover !== 'seven' ? 'white' : '#f5fcff'}`,
+              }}
+            >
               {' '}
               <img src={Consulting} alt="" />
             </div>
@@ -434,12 +520,10 @@ const Home = () => {
         </div>
         <div className="text">
           <h1>Get In Touch With Us</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-            vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
-            molestie.
-          </p>
-          <CustomButton>Contact Us</CustomButton>
+          <p>Are you ready to start your next project, contact us below</p>
+          <CustomButton onClick={() => history.push(CONTACT)}>
+            Contact Us
+          </CustomButton>
         </div>
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
@@ -514,7 +598,7 @@ Home.Wrapper = styled.div`
     }
   }
   .what-we-do {
-    margin: 8rem 0;
+    margin: 8rem 0 0;
     padding: 1.5rem 8rem;
     & > h1 {
       font-weight: 800;
@@ -542,12 +626,15 @@ Home.Wrapper = styled.div`
         justify-content: space-between;
         align-items: center;
         width: 30%;
+        padding: 3rem 2rem;
+        border-radius: 30px;
         .first {
           padding: 1.3rem 1.1rem;
           background: rgba(97, 208, 255, 0.25);
           border-radius: 35px;
           align-self: flex-start;
           text-align: center;
+          margin-right: 1rem;
         }
         img {
           width: 90%;
@@ -574,12 +661,12 @@ Home.Wrapper = styled.div`
   .services-container {
     display: flex;
     justify-content: space-between;
-    padding: 8rem;
+    padding: 5rem 8rem 8rem;
     position: relative;
     .dotted-box {
       position: absolute;
       left: 0;
-      top: 7%;
+      top: 0;
       /* width: 200px; */
       img {
         /* width: 70%; */
@@ -606,12 +693,25 @@ Home.Wrapper = styled.div`
       display: flex;
       flex-wrap: wrap;
       .container {
-        margin: 2rem 0;
-        width: 33%;
+        margin: 2rem 2rem 2rem 0;
+        width: 30%;
+        border-radius: 30px;
+        padding: 2rem 2rem 3rem;
         &.mobile {
-          margin-bottom: 10rem;
           .first {
-            padding: 1.9rem 2.5rem;
+            padding: 2rem 3.5rem 2rem 2.5rem;
+          img {
+            width: 150%;
+          }
+          }
+        }
+        &.ui {
+          .first {
+            padding: 1.5rem;
+            /* padding: 2rem 2rem 2rem 2rem; */
+          img {
+            width: 80%;
+          }
           }
         }
         .first {
@@ -620,9 +720,10 @@ Home.Wrapper = styled.div`
           border-radius: 35px;
           width: fit-content;
           text-align: center;
-          margin-bottom: 4rem;
+          margin-bottom: 2rem;
+          padding: 2rem 2.7rem 2rem 2rem;
           img {
-            width: 90%;
+            width: 120%;
           }
           img {
           }
@@ -961,6 +1062,7 @@ Home.Wrapper = styled.div`
       width: 40%;
       top: 0%;
       height: 911px;
+      z-index: -1;
     }
   }
   @media (max-width: 768px) {
