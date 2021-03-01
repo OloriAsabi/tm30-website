@@ -10,7 +10,7 @@ import mobile from 'assets/icons/Group 30.png';
 import PMB from 'assets/images/PMB_Home 1.png';
 import eduSpons from 'assets/images/eduspons.png';
 import backup from 'assets/images/ios backup cash 1.png';
-import uiux from 'assets/images/Group 48.svg'
+import uiux from 'assets/images/Group 48.svg';
 import { Link, useHistory } from 'react-router-dom';
 import blog1 from 'assets/images/Rectangle 495.png';
 import blog2 from 'assets/images/Rectangle 496.png';
@@ -175,11 +175,11 @@ const Home = () => {
       </div>
       <section className="what-we-do">
         <h1>What we do</h1>
-        <p>
+        {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
           vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
           molestie.
-        </p>
+        </p> */}
         <div className="details-container">
           <div
             className="details"
@@ -193,7 +193,8 @@ const Home = () => {
             <div className="text">
               <h1>Development</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.
+                We develop custom-made solutions that meets the requirements of
+                our clients.
               </p>
             </div>
           </div>
@@ -212,7 +213,8 @@ const Home = () => {
             <div className="text">
               <h1>Training</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.
+                We offer results-oriented IT courses for personal and career
+                growth
               </p>
             </div>
           </div>
@@ -229,7 +231,8 @@ const Home = () => {
             <div className="text">
               <h1>Consulting</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.
+                Through our counselling administrations, we create activities,
+                designs and solutions
               </p>
             </div>
           </div>
@@ -242,9 +245,9 @@ const Home = () => {
         <div className="text">
           <h1>Our Services</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-            vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
-            molestie.
+            We build custom applications, social applications, widgets, mobile
+            apps and dynamic websites which enables businesses to push out their
+            brand
           </p>
           <CustomButton>Discover</CustomButton>
         </div>
@@ -638,6 +641,7 @@ Home.Wrapper = styled.div`
         }
         .text {
           width: 78%;
+          align-self: flex-start;
           h1 {
             font-size: 24px;
             line-height: 29px;
@@ -697,18 +701,18 @@ Home.Wrapper = styled.div`
         &.mobile {
           .first {
             padding: 2rem 3.5rem 2rem 2.5rem;
-          img {
-            width: 150%;
-          }
+            img {
+              width: 150%;
+            }
           }
         }
         &.ui {
           .first {
             padding: 1.5rem;
             /* padding: 2rem 2rem 2rem 2rem; */
-          img {
-            width: 80%;
-          }
+            img {
+              width: 80%;
+            }
           }
         }
         .first {

@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 import HeroSection from 'components/HeroSection';
 import React from 'react';
 import Elipse8p from 'assets/images/Ellipse 8@2x.png';
-import backUpImg from 'assets/images/Group 48.png';
-import EduImg from 'assets/images/Group 49.png';
-import EstateImg from 'assets/images/Group 38.png';
-import pmbImg from 'assets/images/Group 40 (1).png';
+import backUpImg from 'assets/images/iPhone X Backup Cash 1.png';
+import EduImg from 'assets/images/Web_Mobile Edusponsor 1.png';
+import EstateImg from 'assets/images/estate mgt Web 1.png';
+import pmbImg from 'assets/images/pngwave (3)_1 1.png';
 import Group1 from 'assets/images/Group 1 (3).png';
 import Elipse1 from 'assets/images/Ellipse 1.png';
 // import bg from "assets/images/Group 56.png"
@@ -16,20 +16,18 @@ const Projects = () => {
       <div className="hero">
         <img src={Elipse8p} alt="arc" className="left-arc" />
         <h1>Projects</h1>
-        <p>
-        Take a look at our past projects.
-        </p>
+        <p>Take a look at our past projects.</p>
         <div className="pmb">
-        <div className="text">
-          <h1>PayMyBills</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis
-          </p>
+          <div className="text">
+            <h1>PayMyBills</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              pellentesque facilisis
+            </p>
+          </div>
+          <img src={pmbImg} alt="pmb" className="pmbImg" />
+          <img src={Group1} alt="" className="Group1" />
         </div>
-        <img src={pmbImg} alt="pmb" className="pmbImg" />
-        <img src={Group1} alt="" className="Group1" />
-      </div>
       </div>
       <div className="backup">
         <div className="text">
@@ -42,7 +40,7 @@ const Projects = () => {
         <img src={backUpImg} alt="pmb" className="pmbImg" />
         <img src={Group1} alt="" className="Group1" />
       </div>
-      
+
       <div className="edu">
         <div className="text">
           <h1>Edusponsor</h1>
@@ -67,7 +65,6 @@ const Projects = () => {
         <img src={Group1} alt="" className="Group1" />
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
-      
     </Projects.Wrapper>
   );
 };
@@ -90,15 +87,15 @@ Projects.Wrapper = styled.div`
     );
     height: 420px;
     padding: 1.5rem 8rem;
-    margin : 0 0 3rem 0;
-   & > h1 {
+    margin: 0 0 3rem 0;
+    & > h1 {
       text-align: center;
       font-size: 40px;
       line-height: 49px;
       color: #000d36;
       margin-top: 2rem;
     }
-   & > p {
+    & > p {
       width: 40%;
       margin: 2rem auto;
       font-weight: bold;
@@ -114,11 +111,11 @@ Projects.Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-   
+
     .text {
       align-self: center;
       margin-top: 8rem;
-      margin-left: 16rem; 
+      margin-left: 16rem;
     }
     h1 {
       font-size: 40px;
@@ -140,23 +137,23 @@ Projects.Wrapper = styled.div`
     } */
     .Group1 {
       position: absolute;
-      right: 38%;
+      right: 5%;
       bottom: -5%;
       z-index: -1;
     }
   }
-  .backup{
-    margin-top:17rem;
+  .backup {
+    margin-top: 17rem;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     position: relative;
-   
+
     .text {
       align-self: center;
       margin-top: 10rem;
-      margin-left: 16rem; 
+      margin-left: 16rem;
     }
     h1 {
       font-size: 40px;
@@ -171,28 +168,28 @@ Projects.Wrapper = styled.div`
       width: 50%;
     }
 
-    .pmbImg {
+    /* .pmbImg {
       width: 518px;
-    }
+    } */
     .Group1 {
       position: absolute;
-      left: 38%;
-      bottom: -5%;
+      left: 14%;
+      bottom: 10%;
       z-index: -1;
     }
   }
-  .est{
-    margin-top:-4rem;
+  .est {
+    margin-top: -4rem;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     position: relative;
-   margin-bottom: 8rem;
+    margin-bottom: 8rem;
     .text {
       align-self: center;
       margin-top: 10rem;
-      margin-left: 16rem; 
+      margin-left: 16rem;
     }
     h1 {
       font-size: 40px;
@@ -224,18 +221,18 @@ Projects.Wrapper = styled.div`
       height: 911px;
     }
   }
-  .edu{
-    margin-top:-8rem;
+  .edu {
+    margin-top: -8rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     position: relative;
-   
+
     .text {
       align-self: center;
       margin-top: 10rem;
-      margin-left: 16rem; 
+      margin-left: 16rem;
     }
     h1 {
       font-size: 40px;
@@ -249,96 +246,91 @@ Projects.Wrapper = styled.div`
       color: rgba(0, 13, 54, 0.45);
       width: 50%;
     }
-
-    .pmbImg {
-      width: 518px;
-    }
     .Group1 {
       position: absolute;
-      right: 38%;
+      right: 15%;
       bottom: -5%;
       z-index: -1;
     }
   }
-  @media(max-width : 760px){
-  .est{
-    padding : 2rem;
-     margin-top: 2rem;
-    flex-direction: column;
-       p{
-        width : 100%;
-       }
-       .Group1{
-         display :  none;
-       }
-       .pmbImg{
-         width : 100%;
-         margin-top: 3rem;
-       }
-       .text{
-         margin-left: 0;
-         margin-top: 0;
-       }
-       .ellipse1{
-         display : none;
-       }
-   } 
-   .hero{
-     padding : 2rem;
-     & > p{
-       width : 100%;
-     }
-     .pmb{
-       flex-direction: column;
-       p{
-        width : 100%;
-       }
-       .Group1{
-         display :  none;
-       }
-       .pmbImg{
-         width : 100%;
-       }
-       .text{
-         margin-left: 0;
-       }
-     }
-
-   }
-   .backup{
-    padding : 2rem;
-     margin-top: 30rem;
-    flex-direction: column;
-       p{
-        width : 100%;
-       }
-       .Group1{
-         display :  none;
-       }
-       .pmbImg{
-         width : 100%;
-       }
-       .text{
-         margin-left: 0;
-       }
-   }
-   .edu{
-    padding : 2rem;
-     margin-top: 3rem;
-    flex-direction: column;
-       p{
-        width : 100%;
-       }
-       .Group1{
-         display :  none;
-       }
-       .pmbImg{
-         width : 100%;
-       }
-       .text{
-         margin-left: 0;
-         margin-top: 0;
-       }
-   }
+  @media (max-width: 760px) {
+    .est {
+      padding: 2rem;
+      margin-top: 2rem;
+      flex-direction: column;
+      p {
+        width: 100%;
+      }
+      .Group1 {
+        display: none;
+      }
+      .pmbImg {
+        width: 100%;
+        margin-top: 3rem;
+      }
+      .text {
+        margin-left: 0;
+        margin-top: 0;
+      }
+      .ellipse1 {
+        display: none;
+      }
+    }
+    .hero {
+      padding: 2rem;
+      & > p {
+        width: 100%;
+      }
+      .pmb {
+        flex-direction: column;
+        p {
+          width: 100%;
+        }
+        .Group1 {
+          display: none;
+        }
+        .pmbImg {
+          width: 100%;
+        }
+        .text {
+          margin-left: 0;
+        }
+      }
+    }
+    .backup {
+      padding: 2rem;
+      margin-top: 30rem;
+      flex-direction: column;
+      p {
+        width: 100%;
+      }
+      .Group1 {
+        display: none;
+      }
+      .pmbImg {
+        width: 100%;
+      }
+      .text {
+        margin-left: 0;
+      }
+    }
+    .edu {
+      padding: 2rem;
+      margin-top: 3rem;
+      flex-direction: column;
+      p {
+        width: 100%;
+      }
+      .Group1 {
+        display: none;
+      }
+      .pmbImg {
+        width: 100%;
+      }
+      .text {
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
   }
 `;
