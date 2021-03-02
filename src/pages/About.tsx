@@ -13,6 +13,8 @@ import Albert from 'assets/images/Group 54.png';
 import Placeholder from 'assets/images/Rectangle 524.png';
 import dottedBox2 from 'assets/images/Group 1 (1).png';
 import Elipse1 from 'assets/images/Ellipse 1.png';
+import COO from 'assets/images/Group 54.png';
+import CTO from 'assets/images/Group 55.png';
 
 const values = [
   {
@@ -28,12 +30,14 @@ const values = [
   {
     image: innovation,
     header: 'Innovation',
-    text: 'We are continually drawing out the best arrangements in the best innovative manner.',
+    text:
+      'We are continually drawing out the best arrangements in the best innovative manner.',
   },
   {
     image: Creativivty,
     header: 'Creativity',
-    text: 'We are continually drawing out the best arrangements in the best innovative manner.',
+    text:
+      'We are continually drawing out the best arrangements in the best innovative manner.',
   },
   {
     image: Excellence,
@@ -44,34 +48,34 @@ const values = [
 
 const staffs = [
   {
-    image: Placeholder,
+    image: COO,
     title: 'COO & Partner',
     name: 'Albert Afolabi',
   },
   {
-    image: Placeholder,
+    image: CTO,
     title: 'CTO &  Partner',
     name: 'Albert Saheed',
   },
   {
     image: Placeholder,
-    title: 'CTO &  Partner',
-    name: 'Albert Saheed',
+    title: 'Funke',
+    name: 'Head of Sales',
   },
   {
     image: Placeholder,
-    title: 'CTO &  Partner',
-    name: 'Albert Saheed',
+    title: 'Project Manager',
+    name: 'Motunrayo',
   },
   {
     image: Placeholder,
-    title: 'CTO &  Partner',
-    name: 'Albert Saheed',
+    title: 'Senior developer',
+    name: 'Segun',
   },
   {
     image: Placeholder,
-    title: 'CTO &  Partner',
-    name: 'Albert Saheed',
+    title: 'Senior developer',
+    name: 'Peter',
   },
 ];
 
@@ -82,7 +86,7 @@ const About = () => {
         <HeroSection
           bg="linear-gradient(178.13deg, #61D0FF 1.56%, rgba(240, 250, 255, 0) 100.8%)"
           h1Text="Who we are"
-          pText="We are a software company with strong technical expertise in developing innovative solutions that drive digital transformation in the IT industry. Leveraging our experience, we deliver our solutions with flexibility, responsiveness, efficiency and unmatched performance which has made us one of the most sought after technology company."       
+          pText="We are a software company with strong technical expertise in developing innovative solutions that drive digital transformation in the IT industry. Leveraging our experience, we deliver our solutions with flexibility, responsiveness, efficiency and unmatched performance which has made us one of the most sought after technology company."
           subText="About us"
           heroImg={BG}
         />
@@ -103,9 +107,9 @@ const About = () => {
         <div className="text">
           <h1>Our Mission & Vision</h1>
           <p>
-        Our Mission is to deliver innovative technology solutions that are essential to the way people and businesses work. Our Vision is to be a leading software company in Africa.
-
-
+            Our Mission is to deliver innovative technology solutions that are
+            essential to the way people and businesses work. Our Vision is to be
+            a leading software company in Africa.
           </p>
         </div>
       </div>

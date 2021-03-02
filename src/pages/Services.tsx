@@ -34,7 +34,7 @@ const Services = () => {
             <div className="text">
               <h1>Development</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.
+              We develop custom-made solutions that meets the requirements of our clients
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@ const Services = () => {
             <div className="text">
               <h1>Training</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.
+              We offer results-oriented IT courses for personal and career growth
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ const Services = () => {
             <div className="text">
               <h1>Consulting</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit olsen.
+              Through our counselling administrations, we create activities, designs and solutions
               </p>
             </div>
           </div>

@@ -1,41 +1,54 @@
 import styled from '@emotion/styled';
 import HeroSection from 'components/HeroSection';
 import React from 'react';
-import Elipse8p from 'assets/images/Ellipse 8@2x.png';
 import backUpImg from 'assets/images/iPhone X Backup Cash 1.png';
 import EduImg from 'assets/images/Web_Mobile Edusponsor 1.png';
 import EstateImg from 'assets/images/estate mgt Web 1.png';
 import pmbImg from 'assets/images/pngwave (3)_1 1.png';
 import Group1 from 'assets/images/Group 1 (3).png';
 import Elipse1 from 'assets/images/Ellipse 1.png';
+import bg from 'assets/images/Group 56.png';
+import { Link } from 'react-router-dom';
 // import bg from "assets/images/Group 56.png"
 
 const Projects = () => {
+  let arrow = '>';
   return (
     <Projects.Wrapper>
-      <div className="hero">
-        <img src={Elipse8p} alt="arc" className="left-arc" />
+      <div className="hero" style={{ backgroundImage: 'url(/Group56.png)' }}>
         <h1>Projects</h1>
         <p>Take a look at our past projects.</p>
-        <div className="pmb">
-          <div className="text">
-            <h1>PayMyBills</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              pellentesque facilisis
-            </p>
-          </div>
-          <img src={pmbImg} alt="pmb" className="pmbImg" />
-          <img src={Group1} alt="" className="Group1" />
-        </div>
       </div>
+
+      <div className="pmb">
+        <div className="text">
+          <h1>PayMyBills</h1>
+          <p>
+            PayMyBills is an innovative digital service aggregation and
+            micro-credit solution that leverages well known and proven instant
+            messaging solutions such as WhatsApp to deliver easy, secure and
+            convenient access to bills payment to its users.
+          </p>
+          <Link to={{ pathname: 'https://paymybills.ng/' }} target="_blank">
+            View project {arrow}{' '}
+          </Link>
+        </div>
+        <img src={pmbImg} alt="pmb" className="pmbImg" />
+        <img src={Group1} alt="" className="Group1" />
+      </div>
+
       <div className="backup">
         <div className="text">
           <h1>Backup cash</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis
+            Backup Cash is a financial tool that allows individuals to save and
+            earn upto 16% interest on their savings. The goal is to encourage a
+            disciplined financial lifestyle using any of our savings options. It
+            is easy to use, convenient and equally flexible.
           </p>
+          <Link to={{ pathname: 'https://mybackupcash.com/' }} target="_blank">
+            View project {arrow}{' '}
+          </Link>
         </div>
         <img src={backUpImg} alt="pmb" className="pmbImg" />
         <img src={Group1} alt="" className="Group1" />
@@ -45,9 +58,13 @@ const Projects = () => {
         <div className="text">
           <h1>Edusponsor</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis
+            Edusponsor is a platform that enables candidates have access to
+            examination scholarships as well as other gifts from organizations
+            after participating in qualifying tests.
           </p>
+          <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
+            View project {arrow}{' '}
+          </Link>
         </div>
         <img src={EduImg} alt="pmb" className="pmbImg" />
         <img src={Group1} alt="" className="Group1" />
@@ -57,9 +74,12 @@ const Projects = () => {
         <div className="text">
           <h1>Estate Mgt</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            pellentesque facilisis
+            Residify is an all-round estate management solution that caters for
+            all administrative needs of an estate and its residents.
           </p>
+          {/* <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
+            View project {arrow}{' '}
+          </Link> */}
         </div>
         <img src={EstateImg} alt="pmb" className="pmbImg" />
         <img src={Group1} alt="" className="Group1" />
@@ -73,19 +93,18 @@ export default Projects;
 
 Projects.Wrapper = styled.div`
   position: relative;
-  .left-arc {
-    position: absolute;
-    width: 40%;
-    top: -20%;
-    left: 0;
+  a {
+    color: #61d0ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    display: block;
+    margin: 2rem 0;
   }
   .hero {
-    background: linear-gradient(
-      178.13deg,
-      #61d0ff 1.56%,
-      rgba(240, 250, 255, 0) 100.8%
-    );
-    height: 420px;
+    /* background: linear-gradient(178.13deg, #61D0FF 1.56%, rgba(240, 250, 255, 0) 100.8%); */
+    height: 350px;
     padding: 1.5rem 8rem;
     margin: 0 0 3rem 0;
     & > h1 {
@@ -108,10 +127,11 @@ Projects.Wrapper = styled.div`
 
   .pmb {
     display: flex;
-    justify-content: center;
+    /* justify-content: space-evenly; */
     align-items: center;
-    position: relative;
-
+    position: absolute;
+    top: 7%;
+    width: 100%;
     .text {
       align-self: center;
       margin-top: 8rem;
@@ -127,17 +147,15 @@ Projects.Wrapper = styled.div`
       font-size: 14px;
       line-height: 28px;
       color: rgba(0, 13, 54, 0.45);
-      width: 50%;
+      width: 70%;
     }
 
-    /* .pmbImg {
-      width: 518px;
-      position: absolute;
-      right: 10%;
-    } */
+    .pmbImg {
+      margin-right: 20rem;
+    }
     .Group1 {
       position: absolute;
-      right: 5%;
+      right: 12%;
       bottom: -5%;
       z-index: -1;
     }
@@ -153,7 +171,7 @@ Projects.Wrapper = styled.div`
     .text {
       align-self: center;
       margin-top: 10rem;
-      margin-left: 16rem;
+      margin-left: 26rem;
     }
     h1 {
       font-size: 40px;
@@ -165,15 +183,15 @@ Projects.Wrapper = styled.div`
       font-size: 14px;
       line-height: 28px;
       color: rgba(0, 13, 54, 0.45);
-      width: 50%;
+      width: 75%;
     }
 
-    /* .pmbImg {
-      width: 518px;
-    } */
+    .pmbImg {
+      margin-left: 14.5rem;
+    }
     .Group1 {
       position: absolute;
-      left: 14%;
+      left: 16.5%;
       bottom: 10%;
       z-index: -1;
     }
@@ -185,7 +203,7 @@ Projects.Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: 8rem;
+    margin-bottom: 18rem;
     .text {
       align-self: center;
       margin-top: 10rem;
@@ -201,15 +219,15 @@ Projects.Wrapper = styled.div`
       font-size: 14px;
       line-height: 28px;
       color: rgba(0, 13, 54, 0.45);
-      width: 50%;
+      width: 70%;
     }
 
     .pmbImg {
-      width: 518px;
+      margin-left: 16rem;
     }
     .Group1 {
       position: absolute;
-      left: 38%;
+      left: 20%;
       bottom: -5%;
       z-index: -1;
     }
@@ -228,6 +246,9 @@ Projects.Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    .pmbImg {
+      margin-right: 5rem;
+    }
 
     .text {
       align-self: center;
@@ -244,20 +265,24 @@ Projects.Wrapper = styled.div`
       font-size: 14px;
       line-height: 28px;
       color: rgba(0, 13, 54, 0.45);
-      width: 50%;
+      width: 70%;
     }
     .Group1 {
       position: absolute;
-      right: 15%;
-      bottom: -5%;
+      bottom: 15%;
+      right: 6%;
       z-index: -1;
     }
   }
   @media (max-width: 760px) {
+    & > * {
+      padding: 2rem;
+    }
     .est {
       padding: 2rem;
       margin-top: 2rem;
       flex-direction: column;
+      margin-bottom: 2rem;
       p {
         width: 100%;
       }
@@ -267,6 +292,7 @@ Projects.Wrapper = styled.div`
       .pmbImg {
         width: 100%;
         margin-top: 3rem;
+        margin-left: 0;
       }
       .text {
         margin-left: 0;
@@ -281,8 +307,11 @@ Projects.Wrapper = styled.div`
       & > p {
         width: 100%;
       }
-      .pmb {
+    
+    }
+    .pmb {
         flex-direction: column;
+        top : 12%;
         p {
           width: 100%;
         }
@@ -290,17 +319,20 @@ Projects.Wrapper = styled.div`
           display: none;
         }
         .pmbImg {
-          width: 100%;
+          /* width: 100%; */
+          margin-right: 0;
+         
         }
         .text {
           margin-left: 0;
+          margin-top: 0;
         }
       }
-    }
     .backup {
       padding: 2rem;
-      margin-top: 30rem;
+      margin-top: 85rem;
       flex-direction: column;
+   
       p {
         width: 100%;
       }
@@ -308,16 +340,19 @@ Projects.Wrapper = styled.div`
         display: none;
       }
       .pmbImg {
-        width: 100%;
+       margin-left: 0;
+       width : 100%;
       }
       .text {
         margin-left: 0;
+        margin-top: 1rem;
       }
     }
     .edu {
       padding: 2rem;
       margin-top: 3rem;
       flex-direction: column;
+    
       p {
         width: 100%;
       }
@@ -326,6 +361,7 @@ Projects.Wrapper = styled.div`
       }
       .pmbImg {
         width: 100%;
+        margin-right: 0;
       }
       .text {
         margin-left: 0;

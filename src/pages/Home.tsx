@@ -59,7 +59,7 @@ let allProjects = [
   {
     name: 'PayMyBills',
     desc: 'A Whatsapp payment platform.',
-    link: '',
+    link: 'https://paymybills.ng/',
     image: PMB,
     bgColor: '#74C372',
     addMargin: false,
@@ -67,7 +67,7 @@ let allProjects = [
   {
     name: 'Backup Cash',
     desc: 'A financial savings application.',
-    link: '',
+    link: 'https://mybackupcash.com/',
     image: backup,
     bgColor: '#F5DD01',
     addMargin: false,
@@ -75,7 +75,7 @@ let allProjects = [
   {
     name: 'Edusponsor',
     desc: 'An exam sponsoring platform.',
-    link: '',
+    link: 'https://myedusponsor.com/',
     image: eduSpons,
     bgColor: '#FF57A5',
     addMargin: true,
@@ -408,7 +408,9 @@ const Home = () => {
                   </div>
                   <h2>{proj.name}</h2>
                   <p>{proj.desc}</p>
-                  <Link to={proj.link}>View project {arrow} </Link>
+                  <Link to={{ pathname: proj.link }} target="_blank">
+                    View project {arrow}{' '}
+                  </Link>
                 </section>
               ))}
             </OwlCarousel>
