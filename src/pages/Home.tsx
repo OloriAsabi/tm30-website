@@ -157,7 +157,12 @@ const Home = () => {
     <Home.Wrapper>
       <div className="hero">
         <img src={Elipse8p} alt="arc" className="left-arc" />
-        <div className="text">
+        <div
+          className="text"
+          data-aos="flip-left"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-quad"
+        >
           <h1>
             We help organizations <span>develop</span> technology-driven
             solutions
@@ -171,21 +176,30 @@ const Home = () => {
             About Us
           </CustomButton>
         </div>
-        <img src={heroBg} className="hero-bg" alt="" />
+        <img
+          src={heroBg}
+          className="hero-bg"
+          alt=""
+          data-aos="zoom-in-up"
+          data-aos-duration="1200"
+          data-aos-easing="ease-in-quad"
+        />
       </div>
       <section className="what-we-do">
-        <h1>What we do</h1>
+        <h1 data-aos="fade-up">What we do</h1>
         {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
           vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
           molestie.
         </p> */}
-        <div className="details-container">
+        <div className="details-container" data-aos-duration="2000">
           <div
             className="details"
             onMouseEnter={() => setHover('first')}
             onMouseLeave={() => setHover('')}
             style={{ background: `${hover === 'first' ? 'white' : '#f5fcff'}` }}
+            data-aos="zoom-in"
+            data-aos-duration="2000"
           >
             <div className="first">
               <img src={Dev} alt="" />
@@ -205,6 +219,8 @@ const Home = () => {
             style={{
               background: `${hover === 'second' ? 'white' : '#f5fcff'}`,
             }}
+            data-aos="zoom-out"
+            data-aos-duration="2000"
           >
             <div className="first">
               {' '}
@@ -223,6 +239,8 @@ const Home = () => {
             onMouseEnter={() => setHover('third')}
             onMouseLeave={() => setHover('')}
             style={{ background: `${hover === 'third' ? 'white' : '#f5fcff'}` }}
+            data-aos="zoom-in"
+            data-aos-duration="2000"
           >
             <div className="first">
               {' '}
@@ -240,9 +258,9 @@ const Home = () => {
       </section>
       <div className="services-container">
         <div className="dotted-box">
-          <img src={dottedBox} alt="" />
+          <img src={dottedBox} alt="" data-aos="shake" />
         </div>
-        <div className="text">
+        <div className="text" data-aos="zoom-out-right"  data-aos-duration="2000" data-aos-easing="ease-in-quad">
           <h1>Our Services</h1>
           <p>
             We build custom applications, social applications, widgets, mobile
@@ -250,8 +268,8 @@ const Home = () => {
             brand
           </p>
           <CustomButton>Discover</CustomButton>
-        </div>
-        <div className="service">
+        </div> 
+        <div className="service" data-aos="flip-left"  data-aos-duration="2000">
           <div
             className="container"
             onMouseEnter={() => setHover('fourth')}
@@ -362,7 +380,7 @@ const Home = () => {
       </div>
 
       <div className="projects">
-        <div className="text">
+        <div className="text" data-aos="fade-up"  data-aos-duration="2000">
           <h1>Our Works</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
@@ -371,8 +389,8 @@ const Home = () => {
           </p>
           <CustomButton>Explore</CustomButton>
         </div>
-        <div className="project">
-          <div className="header">
+        <div className="project" >
+          <div className="header" data-aos="fade-right"  data-aos-duration="2000">
             <p
               className={activeTab === 'all' ? 'isActive' : ''}
               onClick={() => handleClick('all')}
@@ -392,7 +410,7 @@ const Home = () => {
               Mobile
             </p>
           </div>
-          <div className="container">
+          <div className="container" data-aos="fade-down"  data-aos-duration="2000">
             <OwlCarousel {...options} key={data.length}>
               {data.map((proj) => (
                 <section key={proj.name}>
@@ -418,7 +436,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="blog">
+      <div className="blog" data-aos="fade-down"  data-aos-duration="2000">
         <div className="header">
           <h1>Explore Our Blog</h1>
           <p>
@@ -427,7 +445,7 @@ const Home = () => {
             molestie.
           </p>
         </div>
-        <div className="blogs">
+        <div className="blogs" data-aos="zoom-in"  data-aos-duration="2000">
           <div className="single-blog">
             <img src={blog1} alt="" />
             <p className="date">admin l 20 Dec 20</p>
@@ -451,7 +469,7 @@ const Home = () => {
         </div>
       </div>
       <div className="testimonial">
-        <div className="header">
+        <div className="header" >
           <h1>Testimonials</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
@@ -459,7 +477,7 @@ const Home = () => {
           </p>
         </div>
         <OwlCarousel items={1} nav>
-          <div className="container">
+          <div className="container" data-aos="fade-up"  data-aos-duration="2000">
             <div className="text">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
@@ -505,22 +523,22 @@ const Home = () => {
             molestie.
           </p>
         </div>
-        <img src={client1} alt="" className="client1" />
-        <img src={client2} alt="" className="client2" />
-        <img src={client3} alt="" className="client3" />
-        <img src={client4} alt="" className="client5" />
-        <img src={client5} alt="" className="client4" />
-        <img src={client6} alt="" className="client6" />
-        <img src={client7} alt="" className="client7" />
-        <img src={client8} alt="" className="client8" />
+        <img src={client1} alt=""  data-aos="fade-down"  data-aos-duration="2000"  className="client1" />
+        <img src={client2} alt="" data-aos="fade-down"  data-aos-duration="2000"  className="client2" />
+        <img src={client3} alt="" data-aos="fade-down"  data-aos-duration="2000"  className="client3" />
+        <img src={client4} alt=""  data-aos="fade-down"  data-aos-duration="2000" className="client5" />
+        <img src={client5} alt=""  data-aos="fade-down"  data-aos-duration="2000" className="client4" />
+        <img src={client6} alt=""  data-aos="fade-down"  data-aos-duration="2000" className="client6" />
+        <img src={client7} alt=""  data-aos="fade-down"  data-aos-duration="2000" className="client7" />
+        <img src={client8} alt="" data-aos="fade-down"  data-aos-duration="2000"  className="client8" />
       </div>
       <div className="contact">
-        <div className="first">
+        <div className="first" data-aos="fade-down"  data-aos-duration="2000">
           <img src={Group4} className="dottedBox" alt="" />
           <img src={RectangleWoman} alt="" className="lady" />
           <img src={Elipse8} alt="" className="Elipse8" />
         </div>
-        <div className="text">
+        <div className="text" data-aos="fade-up"  data-aos-duration="2000">
           <h1>Get In Touch With Us</h1>
           <p>Are you ready to start your next project, contact us below</p>
           <CustomButton onClick={() => history.push(CONTACT)}>
