@@ -94,8 +94,8 @@ const About = () => {
       <p className="heading">We embrace the S.P.I.C.E values</p>
       <h1 className="sub-heading">Our Core Values</h1>
       <div className="core_values">
-        {values.map((val) => (
-          <div className="container">
+        {values.map((val, idx) => (
+          <div className="container" key={idx}>
             <img src={val.image} alt="" />
             <h1>{val.header}</h1>
             <p>{val.text}</p>

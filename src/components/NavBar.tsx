@@ -103,6 +103,7 @@ NavBar.Wrapper = styled.nav`
     width: 50%;
     display: flex;
     justify-content: space-between;
+
     a {
       text-decoration: none;
       font-weight: bold;
@@ -123,7 +124,10 @@ NavBar.Wrapper = styled.nav`
     /* justify-content: space-between; */
     align-items: center;
     .hide {
-      display: none;
+      left: -400px;
+    }
+    .show {
+      left: 0;
     }
     .fas {
       font-size: 25px;
@@ -134,13 +138,15 @@ NavBar.Wrapper = styled.nav`
       padding: 2rem;
       flex-direction: column;
       position: fixed;
+      overflow: hidden;
       top: 0%;
       z-index: 5;
       background-color: white;
       width: 100%;
-      left: 0;
       height: 100vh;
       justify-content: normal;
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s;
       a {
         margin: 2rem 0;
         width: fit-content;

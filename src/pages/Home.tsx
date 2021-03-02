@@ -186,7 +186,7 @@ const Home = () => {
         />
       </div>
       <section className="what-we-do">
-        <h1 data-aos="fade-up">What we do</h1>
+        <h1 data-aos="fade">What we do</h1>
         {/* <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
           vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
@@ -219,7 +219,7 @@ const Home = () => {
             style={{
               background: `${hover === 'second' ? 'white' : '#f5fcff'}`,
             }}
-            data-aos="zoom-out"
+            data-aos="zoom-in"
             data-aos-duration="2000"
           >
             <div className="first">
