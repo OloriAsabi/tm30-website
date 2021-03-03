@@ -33,7 +33,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import est from 'assets/images/Dashboard 1.png';
-import { ABOUT, CONTACT } from './pagesPath';
+import { ABOUT, CONTACT, SERVICES, PROJECTS } from './pagesPath';
 
 const options = {
   loop: false,
@@ -267,7 +267,7 @@ const Home = () => {
             apps and dynamic websites which enables businesses to push out their
             brand
           </p>
-          <CustomButton>Discover</CustomButton>
+          <CustomButton onClick={() => history.push(SERVICES)}>Discover</CustomButton>
         </div> 
         <div className="service" data-aos="flip-left"  data-aos-duration="2000">
           <div
@@ -387,7 +387,7 @@ const Home = () => {
             vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
             molestie.
           </p>
-          <CustomButton>Explore</CustomButton>
+          <CustomButton onClick={() => history.push(PROJECTS)}>Explore</CustomButton>
         </div>
         <div className="project" >
           <div className="header" data-aos="fade-right"  data-aos-duration="2000">
