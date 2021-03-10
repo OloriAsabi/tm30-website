@@ -13,8 +13,12 @@ import Albert from 'assets/images/Group 54.png';
 import Placeholder from 'assets/images/Rectangle 524.png';
 import dottedBox2 from 'assets/images/Group 1 (1).png';
 import Elipse1 from 'assets/images/Ellipse 1.png';
-import COO from 'assets/images/Group 54.png';
-import CTO from 'assets/images/Group 55.png';
+import COO from 'assets/images/Group 95.png';
+import CTO from 'assets/images/Group 88.png';
+import funke from 'assets/images/Group 91.png';
+import Peter from 'assets/images/Group 89.png';
+import Segun from 'assets/images/Group 90.png';
+import Josh from 'assets/images/Group 94.png';
 
 const values = [
   {
@@ -58,24 +62,24 @@ const staffs = [
     name: 'Albert Saheed',
   },
   {
-    image: Placeholder,
+    image: funke,
     title: 'Funke',
     name: 'Head of Sales',
   },
   {
-    image: Placeholder,
-    title: 'Project Manager',
-    name: 'Motunrayo',
-  },
-  {
-    image: Placeholder,
-    title: 'Senior developer',
+    image: Josh,
+    title: 'Software developer',
     name: 'Segun',
   },
   {
-    image: Placeholder,
-    title: 'Senior developer',
+    image: Peter,
+    title: 'Software developer',
     name: 'Peter',
+  },
+  {
+    image: Segun,
+    title: 'Software developer',
+    name: 'Joshua',
   },
 ];
 
@@ -238,7 +242,7 @@ About.Wrapper = styled.div`
           font-size: 24px;
           line-height: 29px;
           color: #000d36;
-          margin: 1rem auto;
+          margin: 2rem auto;
         }
         p {
           font-size: 16px;

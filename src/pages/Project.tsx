@@ -149,6 +149,10 @@ Projects.Wrapper = styled.div`
       color: rgba(0, 13, 54, 0.45);
       width: 70%;
     }
+    a {
+      z-index: 5;
+      position: relative;
+    }
 
     .pmbImg {
       margin-right: 20rem;
@@ -307,32 +311,10 @@ Projects.Wrapper = styled.div`
       & > p {
         width: 100%;
       }
-    
     }
     .pmb {
-        flex-direction: column;
-        top : 12%;
-        p {
-          width: 100%;
-        }
-        .Group1 {
-          display: none;
-        }
-        .pmbImg {
-          /* width: 100%; */
-          margin-right: 0;
-         
-        }
-        .text {
-          margin-left: 0;
-          margin-top: 0;
-        }
-      }
-    .backup {
-      padding: 2rem;
-      margin-top: 85rem;
       flex-direction: column;
-   
+      top: 12%;
       p {
         width: 100%;
       }
@@ -340,8 +322,28 @@ Projects.Wrapper = styled.div`
         display: none;
       }
       .pmbImg {
-       margin-left: 0;
-       width : 100%;
+        /* width: 100%; */
+        margin-right: 0;
+      }
+      .text {
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+    .backup {
+      padding: 2rem;
+      margin-top: 85rem;
+      flex-direction: column;
+
+      p {
+        width: 100%;
+      }
+      .Group1 {
+        display: none;
+      }
+      .pmbImg {
+        margin-left: 0;
+        width: 100%;
       }
       .text {
         margin-left: 0;
@@ -352,7 +354,7 @@ Projects.Wrapper = styled.div`
       padding: 2rem;
       margin-top: 3rem;
       flex-direction: column;
-    
+
       p {
         width: 100%;
       }

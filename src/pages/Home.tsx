@@ -21,13 +21,16 @@ import Elipse1 from 'assets/images/Ellipse 1.png';
 import Elipse9 from 'assets/images/Ellipse 9.png';
 import Elipse8p from 'assets/images/Ellipse 8@2x.png';
 import client1 from 'assets/images/Group 40.png';
-import client2 from 'assets/images/Group 41.png';
+import client2 from 'assets/images/Group 86.png';
 import client3 from 'assets/images/Group 42.png';
 import client4 from 'assets/images/Group 43.png';
 import client5 from 'assets/images/Group 44.png';
 import client6 from 'assets/images/Group 45.png';
 import client7 from 'assets/images/Group 46.png';
 import client8 from 'assets/images/Group 47.png';
+import client9 from 'assets/images/Group 81.png';
+import client10 from 'assets/images/Group 82.png';
+import client11 from 'assets/images/Group 83.png';
 import RectangleWoman from 'assets/images/Rectangle 463.png';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -260,16 +263,23 @@ const Home = () => {
         <div className="dotted-box">
           <img src={dottedBox} alt="" data-aos="shake" />
         </div>
-        <div className="text" data-aos="zoom-out-right"  data-aos-duration="2000" data-aos-easing="ease-in-quad">
+        <div
+          className="text"
+          data-aos="zoom-out-right"
+          data-aos-duration="2000"
+          data-aos-easing="ease-in-quad"
+        >
           <h1>Our Services</h1>
           <p>
             We build custom applications, social applications, widgets, mobile
             apps and dynamic websites which enables businesses to push out their
             brand
           </p>
-          <CustomButton onClick={() => history.push(SERVICES)}>Discover</CustomButton>
-        </div> 
-        <div className="service" data-aos="flip-left"  data-aos-duration="2000">
+          <CustomButton onClick={() => history.push(SERVICES)}>
+            Discover
+          </CustomButton>
+        </div>
+        <div className="service" data-aos="flip-left" data-aos-duration="2000">
           <div
             className="container"
             onMouseEnter={() => setHover('fourth')}
@@ -380,17 +390,23 @@ const Home = () => {
       </div>
 
       <div className="projects">
-        <div className="text" data-aos="fade-up"  data-aos-duration="2000">
+        <div className="text" data-aos="fade-up" data-aos-duration="2000">
           <h1>Our Works</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
             vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
             molestie.
           </p>
-          <CustomButton onClick={() => history.push(PROJECTS)}>Explore</CustomButton>
+          <CustomButton onClick={() => history.push(PROJECTS)}>
+            Explore
+          </CustomButton>
         </div>
-        <div className="project" >
-          <div className="header" data-aos="fade-right"  data-aos-duration="2000">
+        <div className="project">
+          <div
+            className="header"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
             <p
               className={activeTab === 'all' ? 'isActive' : ''}
               onClick={() => handleClick('all')}
@@ -410,7 +426,11 @@ const Home = () => {
               Mobile
             </p>
           </div>
-          <div className="container" data-aos="fade-down"  data-aos-duration="2000">
+          <div
+            className="container"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+          >
             <OwlCarousel {...options} key={data.length}>
               {data.map((proj) => (
                 <section key={proj.name}>
@@ -436,7 +456,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="blog" data-aos="fade-down"  data-aos-duration="2000">
+      <div className="blog" data-aos="fade-down" data-aos-duration="2000">
         <div className="header">
           <h1>Explore Our Blog</h1>
           <p>
@@ -445,31 +465,61 @@ const Home = () => {
             molestie.
           </p>
         </div>
-        <div className="blogs" data-aos="zoom-in"  data-aos-duration="2000">
+        <div className="blogs" data-aos="zoom-in" data-aos-duration="2000">
           <div className="single-blog">
             <img src={blog1} alt="" />
             <p className="date">admin l 20 Dec 20</p>
             <h1>Working in the tech sector</h1>
-            <p className="read">Read more</p>
+            <p className="read">
+              <Link
+                to={{
+                  pathname:
+                    'https://tm30.medium.com/the-software-development-life-cycle-22d7b34de850',
+                }}
+                target="_blank"
+              >
+                Read more
+              </Link>
+            </p>
           </div>
 
           <div className="single-blog">
             <img src={blog2} alt="" />
             <p className="date">admin l 20 Dec 20</p>
             <h1>Comparison chart for Apps</h1>
-            <p className="read">Read more</p>
+            <p className="read">
+              <Link
+                to={{
+                  pathname:
+                    'https://tm30.medium.com/7-tech-mistakes-smes-make-and-how-to-help-avoid-them-30a07951086',
+                }}
+                target="_blank"
+              >
+                Read more
+              </Link>
+            </p>
           </div>
 
           <div className="single-blog">
             <img src={blog3} alt="" />
             <p className="date">admin l 20 Dec 20</p>
             <h1>Right time to join the Cloud?</h1>
-            <p className="read">Read more</p>
+            <p className="read">
+              <Link
+                to={{
+                  pathname:
+                    'https://tm30.medium.com/the-software-development-life-cycle-22d7b34de850',
+                }}
+                target="_blank"
+              >
+                Read more
+              </Link>
+            </p>
           </div>
         </div>
       </div>
       <div className="testimonial">
-        <div className="header" >
+        <div className="header">
           <h1>Testimonials</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
@@ -477,7 +527,11 @@ const Home = () => {
           </p>
         </div>
         <OwlCarousel items={1} nav>
-          <div className="container" data-aos="fade-up"  data-aos-duration="2000">
+          <div
+            className="container"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <div className="text">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
@@ -523,22 +577,91 @@ const Home = () => {
             molestie.
           </p>
         </div>
-        <img src={client1} alt=""  data-aos="fade-down"  data-aos-duration="2000"  className="client1" />
-        <img src={client2} alt="" data-aos="fade-down"  data-aos-duration="2000"  className="client2" />
-        <img src={client3} alt="" data-aos="fade-down"  data-aos-duration="2000"  className="client3" />
-        <img src={client4} alt=""  data-aos="fade-down"  data-aos-duration="2000" className="client5" />
-        <img src={client5} alt=""  data-aos="fade-down"  data-aos-duration="2000" className="client4" />
-        <img src={client6} alt=""  data-aos="fade-down"  data-aos-duration="2000" className="client6" />
-        <img src={client7} alt=""  data-aos="fade-down"  data-aos-duration="2000" className="client7" />
-        <img src={client8} alt="" data-aos="fade-down"  data-aos-duration="2000"  className="client8" />
+        <img
+          src={client1}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client1"
+        />
+        <img
+          src={client2}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client2"
+        />
+        <img
+          src={client3}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client3"
+        />
+        <img
+          src={client4}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client5"
+        />
+        <img
+          src={client5}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client4"
+        />
+        <img
+          src={client6}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client6"
+        />
+        <img
+          src={client7}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client7"
+        />
+        <img
+          src={client8}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client8"
+        />
+        <img
+          src={client9}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client9"
+        />
+        <img
+          src={client10}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client10"
+        />
+        <img
+          src={client11}
+          alt=""
+          data-aos="fade-down"
+          data-aos-duration="2000"
+          className="client11"
+        />
       </div>
       <div className="contact">
-        <div className="first" data-aos="fade-down"  data-aos-duration="2000">
+        <div className="first" data-aos="fade-down" data-aos-duration="2000">
           <img src={Group4} className="dottedBox" alt="" />
           <img src={RectangleWoman} alt="" className="lady" />
           <img src={Elipse8} alt="" className="Elipse8" />
         </div>
-        <div className="text" data-aos="fade-up"  data-aos-duration="2000">
+        <div className="text" data-aos="fade-up" data-aos-duration="2000">
           <h1>Get In Touch With Us</h1>
           <p>Are you ready to start your next project, contact us below</p>
           <CustomButton onClick={() => history.push(CONTACT)}>
@@ -1025,6 +1148,17 @@ Home.Wrapper = styled.div`
     .client5 {
       top: 70%;
       left: 7%;
+    }
+    .client9{
+      bottom: 0;
+      left: 40%;
+    }
+    .client10{
+      top: 10%;
+    }
+    .client11 {
+      top: 20%;
+      right: 30%;
     }
     .client6 {
       top: 50%;

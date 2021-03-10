@@ -32,7 +32,7 @@ const Footer = () => {
             <Link to="/contact">Contact</Link>
           </div>
           <div className="social">
-            <h3 className="heading">Socila Links</h3>
+            <h3 className="heading">Social Links</h3>
             <div className="social-icons">
               <Link
                to={{ pathname: 'https://web.facebook.com/TM30Global' }}
