@@ -124,7 +124,7 @@ NavBar.Wrapper = styled.nav`
     /* justify-content: space-between; */
     align-items: center;
     .hide {
-      left: -400px;
+      left: -768px;
     }
     .show {
       left: 0;
