@@ -85,7 +85,7 @@ let allProjects = [
   },
   {
     name: 'Estate management',
-    desc: 'A Whatsapp payment platform.',
+    desc: 'An Estate management platform.',
     link: '',
     image: est,
     bgColor: '#002DCC',
@@ -393,9 +393,8 @@ const Home = () => {
         <div className="text" data-aos="fade-up" data-aos-duration="2000">
           <h1>Our Works</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-            vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
-            molestie.
+            We deliver solutions that meets & exceeds the expectations of our
+            clients. <br /> View our past projects
           </p>
           <CustomButton onClick={() => history.push(PROJECTS)}>
             Explore
@@ -459,17 +458,12 @@ const Home = () => {
       <div className="blog" data-aos="fade-down" data-aos-duration="2000">
         <div className="header">
           <h1>Explore Our Blog</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-            vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
-            molestie.
-          </p>
         </div>
         <div className="blogs" data-aos="zoom-in" data-aos-duration="2000">
           <div className="single-blog">
             <img src={blog1} alt="" />
             <p className="date">admin l 20 Dec 20</p>
-            <h1>Working in the tech sector</h1>
+            <h1>The Sofware Development Life Cycle</h1>
             <p className="read">
               <Link
                 to={{
@@ -486,7 +480,7 @@ const Home = () => {
           <div className="single-blog">
             <img src={blog2} alt="" />
             <p className="date">admin l 20 Dec 20</p>
-            <h1>Comparison chart for Apps</h1>
+            <h1>7 Tech Mistakes SMEs Make...</h1>
             <p className="read">
               <Link
                 to={{
@@ -503,7 +497,7 @@ const Home = () => {
           <div className="single-blog">
             <img src={blog3} alt="" />
             <p className="date">admin l 20 Dec 20</p>
-            <h1>Right time to join the Cloud?</h1>
+            <h1>SDLC Models</h1>
             <p className="read">
               <Link
                 to={{
@@ -521,10 +515,7 @@ const Home = () => {
       <div className="testimonial">
         <div className="header">
           <h1>Testimonials</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-            vulputate
-          </p>
+          <p>Here's what our past and current clients have to say</p>
         </div>
         <OwlCarousel items={1} nav>
           <div
@@ -534,6 +525,7 @@ const Home = () => {
           >
             <div className="text">
               <p>
+                {' '}
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
                 sed vulputate tellus pellentesque tempor. Vitae leo cras eu
                 vitae molestie.
@@ -1149,11 +1141,11 @@ Home.Wrapper = styled.div`
       top: 70%;
       left: 7%;
     }
-    .client9{
+    .client9 {
       bottom: 0;
       left: 40%;
     }
-    .client10{
+    .client10 {
       top: 10%;
     }
     .client11 {

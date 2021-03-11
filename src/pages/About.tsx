@@ -63,23 +63,23 @@ const staffs = [
   },
   {
     image: funke,
-    title: 'Funke',
-    name: 'Head of Sales',
+    title: 'Sales & Marketing Manager',
+    name: 'Funke Obafemi',
   },
   {
     image: Josh,
     title: 'Software developer',
-    name: 'Segun',
+    name: 'Segun Ajisafe',
   },
   {
     image: Peter,
     title: 'Software developer',
-    name: 'Peter',
+    name: 'Peter Ndeke',
   },
   {
     image: Segun,
     title: 'Software developer',
-    name: 'Joshua',
+    name: 'Joshua Olabiran',
   },
 ];
 
