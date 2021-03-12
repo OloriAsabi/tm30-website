@@ -13,7 +13,7 @@ import Albert from 'assets/images/Group 54.png';
 import Placeholder from 'assets/images/Rectangle 524.png';
 import dottedBox2 from 'assets/images/Group 1 (1).png';
 import Elipse1 from 'assets/images/Ellipse 1.png';
-import COO from 'assets/images/Group 95.png';
+import COO from 'assets/images/Group 95 (1).png';
 import CTO from 'assets/images/Group 88.png';
 import funke from 'assets/images/Group 91.png';
 import Peter from 'assets/images/Group 89.png';
