@@ -91,7 +91,7 @@ const About = () => {
           bg="linear-gradient(178.13deg, #61D0FF 1.56%, rgba(240, 250, 255, 0) 100.8%)"
           h1Text="Who we are"
           pText="We are a software company with strong technical expertise in developing innovative solutions that drive digital transformation in the IT industry. Leveraging our experience, we deliver our solutions with flexibility, responsiveness, efficiency and unmatched performance which has made us one of the most sought after technology company."
-          subText="About us"
+          subText=""
           heroImg={BG}
         />
       </div>
