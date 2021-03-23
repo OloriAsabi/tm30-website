@@ -63,24 +63,9 @@ const staffs = [
   },
   {
     image: funke,
-    title: 'Sales & Marketing Manager',
+    title: 'Head, Product & Sales',
     name: 'Funke Obafemi',
-  },
-  {
-    image: Josh,
-    title: 'Software developer',
-    name: 'Segun Ajisafe',
-  },
-  {
-    image: Peter,
-    title: 'Software developer',
-    name: 'Peter Ndeke',
-  },
-  {
-    image: Segun,
-    title: 'Software developer',
-    name: 'Joshua Olabiran',
-  },
+  }
 ];
 
 const About = () => {
@@ -255,7 +240,7 @@ About.Wrapper = styled.div`
       position: absolute;
       right: 0;
       width: 40%;
-      top: 40%;
+      top: 10%;
       height: 911px;
       z-index: -1;
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import bg from 'assets/images/Group 56.png';
 import { CustomButton } from 'reusables/CustomButton';
 import phone from 'assets/images/Vector (15).png';
 import mail from 'assets/images/Group 58.png';
@@ -9,8 +8,6 @@ import location from 'assets/images/Group 60.png';
 const Contact = () => {
   return (
     <Contact.Wrapper>
-      <div className="wraapper">
-        <img src={bg} alt="" className="bg" />
         <div className="hero">
           <h1>Contact Us</h1>
           <p>
@@ -41,7 +38,7 @@ const Contact = () => {
             <CustomButton>Submit</CustomButton>
           </div>
         </form>
-      </div>
+
       <div className="get-in-touch">
         <h1>Get in Touch</h1>
         <div className="devices">
@@ -78,24 +75,18 @@ const Contact = () => {
 export default Contact;
 
 Contact.Wrapper = styled.div`
-  .wraapper {
-    position: relative;
-  }
   .bg {
     width: 100%;
     /* height: 484px; */
   }
   .hero {
-    position: absolute;
-    top: 10%;
-    width: 92%;
-    right: 3%;
+    background: linear-gradient(180deg, #61D0FF 0%, rgba(240, 250, 255, 0) 151.33%);
+    padding: 6rem;
     & > h1 {
       text-align: center;
       font-size: 40px;
       line-height: 49px;
       color: #000d36;
-      margin-top: 2rem;
     }
     & > p {
       width: 37%;
@@ -108,10 +99,8 @@ Contact.Wrapper = styled.div`
     }
   }
   form {
-    position: absolute;
-    top: 45%;
-    right: 29%;
-    width: 38%;
+    width: 40%;
+    margin: 3rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,7 +205,7 @@ Contact.Wrapper = styled.div`
     }
     form {
       position: static;
-      margin-top: 15rem;
+      margin-top: 2rem;
       width: 100%;
       padding: 2rem;
       .inputs {

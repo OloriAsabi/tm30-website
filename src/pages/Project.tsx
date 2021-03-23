@@ -15,7 +15,7 @@ const Projects = () => {
   let arrow = '>';
   return (
     <Projects.Wrapper>
-      <div className="hero" style={{ backgroundImage: 'url(/Group56.png)' }}>
+      <div className="hero">
         <h1>Projects</h1>
         <p>Take a look at our past projects.</p>
       </div>
@@ -72,7 +72,39 @@ const Projects = () => {
 
       <div className="est">
         <div className="text">
-          <h1>Estate Mgt</h1>
+          <h1>Residify</h1>
+          <p>
+            Residify is an all-round estate management solution that caters for
+            all administrative needs of an estate and its residents.
+          </p>
+          {/* <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
+            View project {arrow}{' '}
+          </Link> */}
+        </div>
+        <img src={EstateImg} alt="pmb" className="pmbImg" />
+        <img src={Group1} alt="" className="Group1" />
+        {/* <img src={Elipse1} alt="" className="ellipse1" /> */}
+      </div>
+    
+      <div className="edu">
+        <div className="text">
+          <h1>Rent4Less</h1>
+          <p>
+            Edusponsor is a platform that enables candidates have access to
+            examination scholarships as well as other gifts from organizations
+            after participating in qualifying tests.
+          </p>
+          <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
+            View project {arrow}{' '}
+          </Link>
+        </div>
+        <img src={EduImg} alt="pmb" className="pmbImg" />
+        <img src={Group1} alt="" className="Group1" />
+      </div>
+    
+      <div className="est mb">
+        <div className="text">
+          <h1>VAS Aggregator</h1>
           <p>
             Residify is an all-round estate management solution that caters for
             all administrative needs of an estate and its residents.
@@ -85,6 +117,7 @@ const Projects = () => {
         <img src={Group1} alt="" className="Group1" />
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
+
     </Projects.Wrapper>
   );
 };
@@ -92,6 +125,9 @@ const Projects = () => {
 export default Projects;
 
 Projects.Wrapper = styled.div`
+.mb{
+  margin-bottom: 18rem!important;
+}
   position: relative;
   a {
     color: #61d0ff;
@@ -103,8 +139,8 @@ Projects.Wrapper = styled.div`
     margin: 2rem 0;
   }
   .hero {
-    /* background: linear-gradient(178.13deg, #61D0FF 1.56%, rgba(240, 250, 255, 0) 100.8%); */
-    height: 350px;
+    background: linear-gradient(180deg, #61D0FF 0%, rgba(240, 250, 255, 0) 151.33%);
+    height: 250px;
     padding: 1.5rem 8rem;
     margin: 0 0 3rem 0;
     & > h1 {
@@ -129,8 +165,6 @@ Projects.Wrapper = styled.div`
     display: flex;
     /* justify-content: space-evenly; */
     align-items: center;
-    position: absolute;
-    top: 7%;
     width: 100%;
     .text {
       align-self: center;
@@ -159,13 +193,12 @@ Projects.Wrapper = styled.div`
     }
     .Group1 {
       position: absolute;
-      right: 12%;
-      bottom: -5%;
+      right: 14%;
+      top: 22%;
       z-index: -1;
     }
   }
   .backup {
-    margin-top: 17rem;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -201,13 +234,12 @@ Projects.Wrapper = styled.div`
     }
   }
   .est {
-    margin-top: -4rem;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: 18rem;
+    margin-bottom: 3rem;
     .text {
       align-self: center;
       margin-top: 10rem;
@@ -244,7 +276,6 @@ Projects.Wrapper = styled.div`
     }
   }
   .edu {
-    margin-top: -8rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -322,7 +353,7 @@ Projects.Wrapper = styled.div`
         display: none;
       }
       .pmbImg {
-        /* width: 100%; */
+        width: 100%;
         margin-right: 0;
       }
       .text {
@@ -330,9 +361,12 @@ Projects.Wrapper = styled.div`
         margin-top: 0;
       }
     }
+
+    .mb{
+      margin-bottom: 0!important;
+    }
     .backup {
       padding: 2rem;
-      margin-top: 85rem;
       flex-direction: column;
 
       p {

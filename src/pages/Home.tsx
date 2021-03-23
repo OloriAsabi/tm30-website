@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import heroBg from 'assets/images/00Asset 2@4x 1.png';
-import Dev from 'assets/icons/Group 32.png';
+import Dev from 'assets/images/Group 75.png';
+import Dev2 from 'assets/icons/Group 32.png';
 import Training from 'assets/icons/Group.png';
 import Consulting from 'assets/icons/Group 33.png';
 import { CustomButton } from 'reusables/CustomButton';
 import dottedBox from 'assets/icons/Group 3.png';
-import mobile from 'assets/icons/Group 30.png';
+import mobile2 from 'assets/icons/Group 76.png';
+import Api from 'assets/icons/Group 77.png';
+import Ent from 'assets/icons/Group 78.png';
+import Cons from 'assets/icons/Group 79.png';
 import PMB from 'assets/images/PMB_Home 1.png';
 import eduSpons from 'assets/images/eduspons.png';
 import backup from 'assets/images/ios backup cash 1.png';
-import uiux from 'assets/images/Group 48.svg';
 import { Link, useHistory } from 'react-router-dom';
 import blog1 from 'assets/images/Rectangle 495.png';
 import blog2 from 'assets/images/Rectangle 496.png';
@@ -31,12 +34,39 @@ import client8 from 'assets/images/Group 47.png';
 import client9 from 'assets/images/Group 81.png';
 import client10 from 'assets/images/Group 82.png';
 import client11 from 'assets/images/Group 83.png';
+import rent4less from 'assets/icons/Group 107.png';
+import blueCurl from 'assets/icons/Group 106.png';
+import redCurl from 'assets/icons/Group 105.png';
+import alphaMedia from 'assets/icons/Group 108.png';
+import airtel from 'assets/icons/Group 109.png';
+import sfs from 'assets/icons/Group 110.png';
+import blueIcon from 'assets/icons/Group 111.png';
 import RectangleWoman from 'assets/images/Rectangle 463.png';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import est from 'assets/images/Dashboard 1.png';
 import { ABOUT, CONTACT, SERVICES, PROJECTS } from './pagesPath';
+
+const clients = [
+  rent4less,
+  alphaMedia,
+  sfs,
+  blueCurl,
+  redCurl,
+  blueIcon,
+  client1,
+  client2,
+  client3,
+  client5,
+  client7,
+  client8,
+  client9,
+  client10,
+  client11,
+  client4,
+  client6,
+];
 
 const options = {
   loop: false,
@@ -51,6 +81,25 @@ const options = {
     },
     600: {
       items: 2,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+};
+const options2 = {
+  loop: false,
+  margin: 10,
+  nav: false,
+  responsive: {
+    0: {
+      items: 3,
+    },
+    300: {
+      items: 3,
+    },
+    600: {
+      items: 3,
     },
     1000: {
       items: 3,
@@ -205,7 +254,7 @@ const Home = () => {
             data-aos-duration="2000"
           >
             <div className="first">
-              <img src={Dev} alt="" />
+              <img src={Dev2} alt="" />
             </div>
             <div className="text">
               <h1>Development</h1>
@@ -288,17 +337,9 @@ const Home = () => {
               background: `${hover === 'fourth' ? 'white' : '#f5fcff'}`,
             }}
           >
-            <div
-              className="first"
-              style={{
-                background: `${hover !== 'fourth' ? 'white' : '#f5fcff'}`,
-              }}
-            >
-              {' '}
-              <img src={Dev} alt="" />
-            </div>
+            <img src={Dev} alt="" style={{ marginBottom: '2rem' }} />
             <h1>
-              Web <br /> Development
+              Web & Mobile <br /> Development
             </h1>
           </div>
           <div
@@ -309,17 +350,14 @@ const Home = () => {
               background: `${hover === 'fifth' ? 'white' : '#f5fcff'}`,
             }}
           >
-            <div
-              className="first"
-              style={{
-                background: `${hover !== 'fifth' ? 'white' : '#f5fcff'}`,
-              }}
-            >
-              <img src={mobile} className="" alt="" />
-            </div>
-            <h1>
-              Mobile <br /> Development
-            </h1>
+            <img
+              src={mobile2}
+              style={{ marginBottom: '2rem' }}
+              className=""
+              alt=""
+            />
+
+            <h1>Vas</h1>
           </div>
           <div
             className="container"
@@ -329,15 +367,8 @@ const Home = () => {
               background: `${hover === 'eight' ? 'white' : '#f5fcff'}`,
             }}
           >
-            <div
-              className="first"
-              style={{
-                background: `${hover !== 'eight' ? 'white' : '#f5fcff'}`,
-              }}
-            >
-              {' '}
-              <img src={Dev} alt="" />
-            </div>
+            <img src={Api} style={{ marginBottom: '2rem' }} alt="" />
+
             <h1>
               Software <br /> Integration
             </h1>
@@ -351,18 +382,11 @@ const Home = () => {
               background: `${hover === 'sixth' ? 'white' : '#f5fcff'}`,
             }}
           >
-            <div
-              className="first"
-              style={{
-                background: `${hover !== 'sixth' ? 'white' : '#f5fcff'}`,
-              }}
-            >
-              {' '}
-              <img src={uiux} alt="" />
-            </div>
+            <img src={Ent} alt="" style={{ marginBottom: '2rem' }} />
+
             <h1>
-              UI/UX <br />
-              Design
+              Solution <br />
+              Enterprise
             </h1>
           </div>
           <div
@@ -373,15 +397,7 @@ const Home = () => {
               background: `${hover === 'seven' ? 'white' : '#f5fcff'}`,
             }}
           >
-            <div
-              className="first"
-              style={{
-                background: `${hover !== 'seven' ? 'white' : '#f5fcff'}`,
-              }}
-            >
-              {' '}
-              <img src={Consulting} alt="" />
-            </div>
+            <img src={Cons} alt="" style={{ marginBottom: '2rem' }} />
             <h1>
               IT <br /> Consulting
             </h1>
@@ -401,11 +417,7 @@ const Home = () => {
           </CustomButton>
         </div>
         <div className="project">
-          <div
-            className="header"
-            data-aos="fade-right"
-            data-aos-duration="2000"
-          >
+          <div className="header">
             <p
               className={activeTab === 'all' ? 'isActive' : ''}
               onClick={() => handleClick('all')}
@@ -569,84 +581,140 @@ const Home = () => {
             molestie.
           </p>
         </div>
-        <img
-          src={client1}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client1"
-        />
-        <img
-          src={client2}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client2"
-        />
-        <img
-          src={client3}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client3"
-        />
-        <img
-          src={client4}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client5"
-        />
-        <img
-          src={client5}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client4"
-        />
-        <img
-          src={client6}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client6"
-        />
-        <img
-          src={client7}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client7"
-        />
-        <img
-          src={client8}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client8"
-        />
-        <img
-          src={client9}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client9"
-        />
-        <img
-          src={client10}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client10"
-        />
-        <img
-          src={client11}
-          alt=""
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          className="client11"
-        />
+
+        <div className="clients">
+          <img
+            src={client1}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client1"
+          />
+          <img
+            src={redCurl}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="redCurl"
+          />
+          <img
+            src={blueCurl}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="blueCurl"
+          />
+          <img
+            src={airtel}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="airtel"
+          />
+          <img
+            src={client3}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client3"
+          />
+          <img
+            src={client4}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client5"
+          />
+          <img
+            src={client5}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client4"
+          />
+          <img
+            src={client6}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client6"
+          />
+          <img
+            src={client7}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client7"
+          />
+          <img
+            src={client8}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client8"
+          />
+          <img
+            src={client9}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client9"
+          />
+          <img
+            src={client10}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client10"
+          />
+          <img
+            src={client11}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client11"
+          />
+          <img
+            src={rent4less}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client12"
+          />
+          <img
+            src={alphaMedia}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client13"
+          />
+          <img
+            src={sfs}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client14"
+          />
+          <img
+            src={blueIcon}
+            alt=""
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            className="client2"
+          />
+        </div>
       </div>
+      <OwlCarousel {...options2}>
+        {clients.map((client, idx) => (
+          <img
+            src={client}
+            alt="clients"
+            className="mobile-clients"
+            key={idx}
+            style={{ width: 'auto', padding: '1rem' }}
+          />
+        ))}
+      </OwlCarousel>
       <div className="contact">
         <div className="first" data-aos="fade-down" data-aos-duration="2000">
           <img src={Group4} className="dottedBox" alt="" />
@@ -671,6 +739,9 @@ export default Home;
 Home.Wrapper = styled.div`
   .isActive {
     border-bottom: 1px solid green;
+  }
+  .mobile-clients {
+    display: none !important;
   }
 
   .owl-nav {
@@ -835,31 +906,30 @@ Home.Wrapper = styled.div`
         padding: 2rem 2rem 3rem;
         &.mobile {
           .first {
-            padding: 2rem 3.5rem 2rem 2.5rem;
+            /* padding: 2rem 3.5rem 2rem 2.5rem;
             img {
               width: 150%;
-            }
+            } */
           }
         }
         &.ui {
           .first {
-            padding: 1.5rem;
             /* padding: 2rem 2rem 2rem 2rem; */
-            img {
+            /* img {
               width: 80%;
-            }
+            } */
           }
         }
         .first {
-          padding: 1.9rem 1.9rem;
-          background: white;
-          border-radius: 35px;
-          width: fit-content;
+          /* padding: 1.9rem 1.9rem; */
+          /* background: white; */
+          /* border-radius: 35px;
+          width: fit-content; */
           text-align: center;
           margin-bottom: 2rem;
-          padding: 2rem 2.7rem 2rem 2rem;
+          /* padding: 2rem 2.7rem 2rem 2rem; */
           img {
-            width: 120%;
+            /* width: 120%; */
           }
           img {
           }
@@ -1124,44 +1194,74 @@ Home.Wrapper = styled.div`
     .client1 {
       top: 6%;
       left: 2%;
+      display: none;
     }
     .client2 {
-      top: 25%;
-      left: 15%;
+      top: 5%;
+      left: 28%;
     }
     .client3 {
       top: 45%;
       left: 24%;
+      display: none;
     }
     .client4 {
       top: 80%;
-      right: 30%;
+      left: 18%;
     }
     .client5 {
-      top: 70%;
-      left: 7%;
+      top: 20%;
+      left: 10%;
+    }
+    .airtel {
+      left: 4%;
+      bottom: 14%;
     }
     .client9 {
       bottom: 0;
-      left: 40%;
+      left: 50%;
+      display: none;
     }
     .client10 {
       top: 10%;
+      left: 45%;
     }
     .client11 {
-      top: 20%;
+      top: 10%;
       right: 30%;
+    }
+    .client12 {
+      top: 80%;
+      right: 30%;
+    }
+    .client14 {
+      top: 40%;
+      left: 20%;
+    }
+
+    .client13 {
+      bottom: 10%;
+      left: 38%;
     }
     .client6 {
       top: 50%;
       right: 21%;
+      display: none;
     }
     .client7 {
-      top: 10%;
+      bottom: 0%;
       right: 8%;
     }
     .client8 {
-      top: 70%;
+      top: 50%;
+      right: 21%;
+    }
+    .redCurl{
+      top: 17%;
+      right: 15%;
+    }
+    .blueCurl{
+      bottom : 30%;
       right: 3%;
     }
   }
@@ -1213,6 +1313,10 @@ Home.Wrapper = styled.div`
     }
   }
   @media (max-width: 768px) {
+    .mobile-clients {
+      display: inline !important;
+      cursor: grab;
+    }
     .hero {
       flex-direction: column;
       padding: 2rem 0;
@@ -1332,6 +1436,8 @@ Home.Wrapper = styled.div`
     }
     .partners {
       padding: 2rem;
+      margin-bottom: 0;
+      height: auto;
       .text h1 {
         font-size: 20px;
       }
@@ -1384,6 +1490,9 @@ Home.Wrapper = styled.div`
       .ellipse1 {
         display: none;
       }
+    }
+    .clients {
+      display: none;
     }
   }
 `;

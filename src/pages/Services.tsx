@@ -15,7 +15,7 @@ import { useHistory } from 'react-router-dom';
 import { CONTACT } from './pagesPath';
 
 const Services = () => {
-  const history = useHistory()
+  const history = useHistory();
   return (
     <Services.Wrapper>
       <HeroSection
@@ -34,7 +34,8 @@ const Services = () => {
             <div className="text">
               <h1>Development</h1>
               <p>
-              We develop custom-made solutions that meets the requirements of our clients
+                We develop custom-made solutions that meets the requirements of
+                our clients
               </p>
             </div>
           </div>
@@ -45,7 +46,8 @@ const Services = () => {
             <div className="text">
               <h1>Training</h1>
               <p>
-              We offer results-oriented IT courses for personal and career growth
+                We offer results-oriented IT courses for personal and career
+                growth
               </p>
             </div>
           </div>
@@ -56,7 +58,8 @@ const Services = () => {
             <div className="text">
               <h1>Consulting</h1>
               <p>
-              Through our counselling administrations, we create activities, designs and solutions
+                Through our counselling administrations, we create activities,
+                designs and solutions
               </p>
             </div>
           </div>
@@ -68,18 +71,23 @@ const Services = () => {
           <div className="first">
             <img src={Dev} alt="" />
           </div>
-          <h1>Web Development</h1>
+          <h1>Web & Mobile Development</h1>
           <p>
-          At TM30, we develop custom-made solutions that meets the requirements of our clients. From prototyping, to design, develop and support, we deliver a solution that will gain market acceptance after launch.
+            At TM30, we develop custom-made solutions that meets the
+            requirements of our clients. From prototyping, to design, develop
+            and support, we deliver a solution that will gain market acceptance
+            after launch.
           </p>
         </div>
         <div className="container mobile">
           <div className="first">
             <img src={mobile} className="" alt="" />
           </div>
-          <h1>Mobile Development</h1>
+          <h1>Telecom VAS</h1>
           <p>
-          With increasing demand and usage of mobile phones, designing a purpose built app for your business and organization opens up endless opportunities. 
+            With increasing demand and usage of mobile phones, designing a
+            purpose built app for your business and organization opens up
+            endless opportunities.
           </p>
         </div>
         <div className="container">
@@ -88,7 +96,8 @@ const Services = () => {
           </div>
           <h1>Software Integration</h1>
           <p>
-          We bring together various types of software sub-systems so that they create a unified single system for businesses and brands
+            We bring together various types of software sub-systems so that they
+            create a unified single system for businesses and brands
           </p>
         </div>
 
@@ -96,9 +105,11 @@ const Services = () => {
           <div className="first">
             <img src={Training} alt="" />
           </div>
-          <h1>UI/UX Design</h1>
+          <h1>Enterprise Solution</h1>
           <p>
-          We carefully plan wonderful, natural interfaces that are straightforward and awesome to utilize, we also sketch, model, repeat, plan and test to produce useful experiences
+            We carefully plan wonderful, natural interfaces that are
+            straightforward and awesome to utilize, we also sketch, model,
+            repeat, plan and test to produce useful experiences
           </p>
         </div>
         <div className="container">
@@ -109,7 +120,7 @@ const Services = () => {
           <p>
             Through our consulting services, we develop initiatives, structures
             and solutions that you need to get the most out of your IT
-            investment. 
+            investment.
           </p>
         </div>
       </div>
@@ -121,10 +132,10 @@ const Services = () => {
         </div>
         <div className="text">
           <h1>Get In Touch With Us</h1>
-          <p>
-          Are you ready to start your next project, contact us below
-          </p>
-          <CustomButton onClick={() => history.push(CONTACT)}>Contact</CustomButton>
+          <p>Are you ready to start your next project, contact us below</p>
+          <CustomButton onClick={() => history.push(CONTACT)}>
+            Contact
+          </CustomButton>
         </div>
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
