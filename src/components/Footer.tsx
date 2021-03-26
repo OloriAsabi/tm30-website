@@ -28,20 +28,22 @@ const Footer = () => {
             <Link to="/about">About</Link>
             <Link to="/services">Services</Link>
             <Link to="/projects">Project</Link>
-            <Link to="/blog">Blog</Link>
+            <Link to={{ pathname: 'https://medium.com/@tm30' }} target="_blank">
+              Blog
+            </Link>
             <Link to="/contact">Contact</Link>
           </div>
           <div className="social">
             <h3 className="heading">Social Links</h3>
             <div className="social-icons">
               <Link
-               to={{ pathname: 'https://web.facebook.com/TM30Global' }}
+                to={{ pathname: 'https://web.facebook.com/TM30Global' }}
                 target="_blank"
               >
                 <img src={FB} alt="fb" />
               </Link>
               <Link
-                 to={{ pathname: 'https://twitter.com/TM30Global' }}
+                to={{ pathname: 'https://twitter.com/TM30Global' }}
                 target="_blank"
               >
                 <img src={twitter} alt="twitter" />
