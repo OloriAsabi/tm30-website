@@ -85,14 +85,14 @@ const Projects = () => {
         <img src={Group1} alt="" className="Group1" />
         {/* <img src={Elipse1} alt="" className="ellipse1" /> */}
       </div>
-    
+
       <div className="edu">
         <div className="text">
           <h1>Rent4Less</h1>
           <p>
-            Edusponsor is a platform that enables candidates have access to
-            examination scholarships as well as other gifts from organizations
-            after participating in qualifying tests.
+            Rent4Less by Alpha Mead is a rental scheme designed to provide a
+            flexible and convenient option for middle income Nigerians to rent
+            homes.
           </p>
           <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
             View project {arrow}{' '}
@@ -101,13 +101,14 @@ const Projects = () => {
         <img src={EduImg} alt="pmb" className="pmbImg" />
         <img src={Group1} alt="" className="Group1" />
       </div>
-    
+
       <div className="est mb">
         <div className="text">
           <h1>VAS Aggregator</h1>
           <p>
-            Residify is an all-round estate management solution that caters for
-            all administrative needs of an estate and its residents.
+            TM30’s a proprietary VAS Service Delivery Platform (SDP) is
+            specifically designed for VAS operators and media companies to
+            launch services and gain competitive advantage
           </p>
           {/* <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
             View project {arrow}{' '}
@@ -117,7 +118,6 @@ const Projects = () => {
         <img src={Group1} alt="" className="Group1" />
         <img src={Elipse1} alt="" className="ellipse1" />
       </div>
-
     </Projects.Wrapper>
   );
 };
@@ -125,9 +125,9 @@ const Projects = () => {
 export default Projects;
 
 Projects.Wrapper = styled.div`
-.mb{
-  margin-bottom: 18rem!important;
-}
+  .mb {
+    margin-bottom: 18rem !important;
+  }
   position: relative;
   a {
     color: #61d0ff;
@@ -139,7 +139,11 @@ Projects.Wrapper = styled.div`
     margin: 2rem 0;
   }
   .hero {
-    background: linear-gradient(180deg, #61D0FF 0%, rgba(240, 250, 255, 0) 151.33%);
+    background: linear-gradient(
+      180deg,
+      #61d0ff 0%,
+      rgba(240, 250, 255, 0) 151.33%
+    );
     height: 250px;
     padding: 1.5rem 8rem;
     margin: 0 0 3rem 0;
@@ -362,8 +366,8 @@ Projects.Wrapper = styled.div`
       }
     }
 
-    .mb{
-      margin-bottom: 0!important;
+    .mb {
+      margin-bottom: 0 !important;
     }
     .backup {
       padding: 2rem;

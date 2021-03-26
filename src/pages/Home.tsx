@@ -538,9 +538,10 @@ const Home = () => {
             <div className="text">
               <p>
                 {' '}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu
-                sed vulputate tellus pellentesque tempor. Vitae leo cras eu
-                vitae molestie.
+                We thank TM30 for the wonderful job in helping us develop our
+                software. Everyone was professional, excellent and hard working.
+                Thanks to them, we were able to achieve our goal on time, and we
+                look forward to continue working with them in the future.
               </p>
               <img src={Elipse8} alt="" />
             </div>
@@ -576,9 +577,7 @@ const Home = () => {
         <div className="text">
           <h1>Our Partners</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu sed
-            vulputate tellus pellentesque tempor. Vitae leo cras eu vitae
-            molestie.
+         Here are some of the clients we have worked with in the past
           </p>
         </div>
 
@@ -1256,12 +1255,12 @@ Home.Wrapper = styled.div`
       top: 50%;
       right: 21%;
     }
-    .redCurl{
+    .redCurl {
       top: 17%;
       right: 15%;
     }
-    .blueCurl{
-      bottom : 30%;
+    .blueCurl {
+      bottom: 30%;
       right: 3%;
     }
   }

@@ -85,9 +85,11 @@ const Services = () => {
           </div>
           <h1>Telecom VAS</h1>
           <p>
-            With increasing demand and usage of mobile phones, designing a
-            purpose built app for your business and organization opens up
-            endless opportunities.
+            Telecom VAS is
+            specifically designed for VAS operators and media companies to
+            launch services and gain competitive advantage. Our highly scalable
+            platform can handle various services from Content Providers and
+            deliver same to Mobile subscribers through different channels.
           </p>
         </div>
         <div className="container">
