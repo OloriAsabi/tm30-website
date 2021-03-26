@@ -357,7 +357,7 @@ const Home = () => {
               alt=""
             />
 
-            <h1>Vas</h1>
+            <h1>Telecom value added service</h1>
           </div>
           <div
             className="container"

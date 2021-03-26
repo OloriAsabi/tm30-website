@@ -244,6 +244,8 @@ Services.Wrapper = styled.div`
       }
     }
     .text {
+      position: relative;
+      z-index: 100;
       width: 45%;
       align-self: center;
       h1 {

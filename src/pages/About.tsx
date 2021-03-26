@@ -16,9 +16,7 @@ import Elipse1 from 'assets/images/Ellipse 1.png';
 import COO from 'assets/images/Group 95 (1).png';
 import CTO from 'assets/images/Group 88.png';
 import funke from 'assets/images/Group 91.png';
-import Peter from 'assets/images/Group 89.png';
-import Segun from 'assets/images/Group 90.png';
-import Josh from 'assets/images/Group 94.png';
+
 
 const values = [
   {
@@ -196,7 +194,7 @@ About.Wrapper = styled.div`
   .team {
     position: relative;
     padding: 0 8rem;
-    margin: 15rem auto 5rem;
+    margin: 15rem auto 9rem;
     .dottedBox2 {
       position: absolute;
       left: 0;

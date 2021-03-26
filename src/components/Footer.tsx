@@ -16,10 +16,11 @@ const Footer = () => {
         <div className="first">
           <img src={Logo} alt="" />
           <p>
-            Address: 22 Berkley Street, Lagos Island, <br /> Lagos
+            Address: 22 Berkley Street, off king george road, onikan Lagos  <br /> Lagos
           </p>
           <p>Phone: +234 80 3467 8549</p>
-          <p>Email: contact@tm30.net</p>
+          <p>Phone: +234 81 8250 4430</p>
+          <p>Email: info@tm30.net</p>
         </div>
         <div className="second">
           <div className="quick">
@@ -60,7 +61,7 @@ const Footer = () => {
       </div>
       <div className="line"></div>
       <div className="last-text">
-        <p>Copyright {currentYear} @ tm30</p>
+        <p>Copyright {currentYear} @ Tm30</p>
         <div className="other-link">
           <p>Terms of Use | Privacy Policy</p>
         </div>
