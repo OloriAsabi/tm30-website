@@ -118,7 +118,7 @@ const Projects = () => {
         </div>
         <img src={vas} alt="vas" className="pmbImg" />
         {/* <img src={Group1} alt="" className="Group1" /> */}
-        <img src={Elipse1} alt="" className="ellipse1" />
+        {/* <img src={Elipse1} alt="" className="ellipse1" /> */}
       </div>
     </Projects.Wrapper>
   );
