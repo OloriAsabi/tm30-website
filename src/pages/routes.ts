@@ -1,15 +1,35 @@
+import About from './About';
 import Home from './Home';
-import { NOT_FOUND, HOME } from './pagesPath';
+import { ABOUT, HOME, PROJECTS, SERVICES, CONTACT } from './pagesPath';
+import Projects from './Project';
+import Services from './Services';
+import Contact from './Contact';
 
+// do a not found page
 const routes = [
-  // {
-  //   path: USER,
-  //   component: ,
-  //   exact: false,
-  // },
+  {
+    path: ABOUT,
+    component: About,
+    exact: false,
+  },
   {
     path: HOME,
     component: Home,
+    exact: false,
+  },
+  {
+    path: SERVICES,
+    component: Services,
+    exact: false,
+  },
+  {
+    path: PROJECTS,
+    component: Projects,
+    exact: false,
+  },
+  {
+    path: CONTACT,
+    component: Contact,
     exact: false,
   },
 ];
