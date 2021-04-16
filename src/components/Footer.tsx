@@ -15,11 +15,11 @@ const Footer = () => {
       <div className="foo">
         <div className="first">
           <img src={Logo} alt="" />
-          <p>
+          <p className="address">
             Address: 22 Berkley Street, off king george road, onikan Lagos  <br /> Lagos
           </p>
-          <p>Phone: +234 80 3467 8549</p>
-          <p>Phone: +234 81 8250 4430</p>
+          <p>Phone: +234 803 467 8549</p>
+          <p>Phone: +234 818 250 4430</p>
           <p>Email: info@tm30.net</p>
         </div>
         <div className="second">
@@ -61,7 +61,7 @@ const Footer = () => {
       </div>
       <div className="line"></div>
       <div className="last-text">
-        <p>Copyright {currentYear} @ Tm30</p>
+        <p>Copyright {currentYear} @ TM30</p>
         <div className="other-link">
           <p>Terms of Use | Privacy Policy</p>
         </div>
@@ -79,6 +79,9 @@ Footer.Wrapper = styled.footer`
   z-index: 2;
   color: white;
   height: 400px;
+  .address{
+    text-transform: capitalize;
+  }
   .foo {
     padding: 0 8rem;
     margin: 0 0 2rem 0;

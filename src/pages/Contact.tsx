@@ -6,6 +6,10 @@ import mail from 'assets/images/Group 58.png';
 import location from 'assets/images/Group 60.png';
 
 const Contact = () => {
+
+  const handleSubmit = (e:any) => {
+    e.preventDefault()
+  }
   return (
     <Contact.Wrapper>
         <div className="hero">
@@ -14,7 +18,7 @@ const Contact = () => {
           Are you ready to start your next project, contact us below.
           </p>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="inputs">
             <label>
               <p className="label"> Name</p>
