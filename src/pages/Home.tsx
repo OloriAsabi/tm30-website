@@ -145,7 +145,7 @@ let allProjects = [
 let webProjects = [
   {
     name: 'Estate management',
-    desc: 'A Whatsapp payment platform.',
+    desc: 'An Estate management platform.',
     link: '',
     image: est,
     bgColor: '#002DCC',
