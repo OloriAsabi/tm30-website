@@ -5,3 +5,4 @@ export const SERVICES = '/services';
 export const PROJECTS = '/projects';
 export const BLOG = '/blog';
 export const CONTACT = '/contact';
+export const CAREERS = '/careers';

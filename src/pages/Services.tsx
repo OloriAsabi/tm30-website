@@ -18,6 +18,7 @@ const Services = () => {
   const history = useHistory();
   return (
     <Services.Wrapper>
+      <div>
       <HeroSection
         bg="linear-gradient(178.13deg, #61D0FF 1.56%, rgba(240, 250, 255, 0) 100.8%)"
         h1Text="What we do"
@@ -25,6 +26,7 @@ const Services = () => {
         subText="Our Services"
         heroImg={BG}
       />
+      </div>
       <div className="what-we-do">
         <div className="details-container">
           <div className="details">

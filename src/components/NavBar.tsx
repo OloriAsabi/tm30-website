@@ -9,6 +9,7 @@ import {
   BLOG,
   PROJECTS,
   CONTACT,
+  CAREERS,
 } from 'pages/pagesPath';
 
 const NavBar = () => {
@@ -37,9 +38,13 @@ const NavBar = () => {
       name: 'blog',
     },
     {
+      route: CAREERS,
+      name: 'careers',
+    },
+    {
       route: CONTACT,
       name: 'contact',
-    },
+    }
   ];
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { HOME, NOT_FOUND } from '../pages/pagesPath';
+import { NOT_FOUND, HOME } from '../pages/pagesPath';
 
 interface RouteType {
   path: string;
@@ -8,7 +8,7 @@ interface RouteType {
   exact?: boolean;
 }
 
-export const convertRoutesToComponents = (routes: RouteType[]) => {
+export const convertRoutesToComponents = (routes : RouteType[]) => {
   const paths = window.location.pathname
 
 

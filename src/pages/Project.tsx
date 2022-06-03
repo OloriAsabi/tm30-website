@@ -11,7 +11,6 @@ import bg from 'assets/images/Group 56.png';
 import rent from 'assets/images/Rent4Less Mockup 1.png';
 import vas from 'assets/images/VAS Mockup 1.png';
 import { Link } from 'react-router-dom';
-// import bg from "assets/images/Group 56.png"
 
 const Projects = () => {
   let arrow = '>';
@@ -79,13 +78,13 @@ const Projects = () => {
             Residify is an all-round estate management solution that caters for
             all administrative needs of an estate and its residents.
           </p>
-          {/* <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
+          <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
             View project {arrow}{' '}
-          </Link> */}
+          </Link>
         </div>
         <img src={EstateImg} alt="pmb" className="pmbImg" />
         <img src={Group1} alt="" className="Group1" />
-        {/* <img src={Elipse1} alt="" className="ellipse1" /> */}
+        <img src={Elipse1} alt="" className="ellipse1" />
       </div>
 
       <div className="edu">
@@ -101,7 +100,7 @@ const Projects = () => {
           </Link>
         </div>
         <img src={rent} alt="pmb" className="pmbImg" />
-        {/* <img src={Group1} alt="" className="Group1" /> */}
+        <img src={Group1} alt="" className="Group1" />
       </div>
 
       <div className="est mb">
@@ -112,13 +111,13 @@ const Projects = () => {
             specifically designed for VAS operators and media companies to
             launch services and gain competitive advantage
           </p>
-          {/* <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
+          <Link to={{ pathname: 'https://myedusponsor.com/' }} target="_blank">
             View project {arrow}{' '}
-          </Link> */}
+          </Link>
         </div>
         <img src={vas} alt="vas" className="pmbImg" />
-        {/* <img src={Group1} alt="" className="Group1" /> */}
-        {/* <img src={Elipse1} alt="" className="ellipse1" /> */}
+        <img src={Group1} alt="" className="Group1" />
+        <img src={Elipse1} alt="" className="ellipse1" />
       </div>
     </Projects.Wrapper>
   );
